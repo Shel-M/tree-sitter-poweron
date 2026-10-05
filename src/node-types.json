@@ -1,0 +1,5019 @@
+[
+  {
+    "type": "across_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "across",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "addition_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "addition_expression",
+          "named": true
+        },
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "date",
+          "named": true
+        },
+        {
+          "type": "division_expression",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "field_access",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "money",
+          "named": true
+        },
+        {
+          "type": "multiplication_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "rate",
+          "named": true
+        },
+        {
+          "type": "subtraction_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_access",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "primitive_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assignment_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "blocksize_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "blocksize",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "boolean_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "and",
+          "named": true
+        },
+        {
+          "type": "any",
+          "named": true
+        },
+        {
+          "type": "boolean_expression",
+          "named": true
+        },
+        {
+          "type": "comparison",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "not",
+          "named": true
+        },
+        {
+          "type": "or",
+          "named": true
+        },
+        {
+          "type": "record_name",
+          "named": true
+        },
+        {
+          "type": "with",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bottomrecord",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "prepetitionbal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "call_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "col_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "col",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "left",
+          "named": true
+        },
+        {
+          "type": "right",
+          "named": true
+        },
+        {
+          "type": "wrap",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comparison",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comparison_operator",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comparison_operator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "const_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "date",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "money",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "rate",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "datasize_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "datasize",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "date_conv",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "date_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "define_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "define",
+          "named": true
+        },
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "include_statement",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "division_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "date",
+          "named": true
+        },
+        {
+          "type": "division_expression",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "field_access",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "money",
+          "named": true
+        },
+        {
+          "type": "multiplication_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "rate",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "do_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "eft",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "else_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "else",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "every",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "every",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "starting",
+          "named": true
+        },
+        {
+          "type": "with",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "addition_expression",
+          "named": true
+        },
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "date",
+          "named": true
+        },
+        {
+          "type": "division_expression",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "field_access",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "money",
+          "named": true
+        },
+        {
+          "type": "multiplication_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "rate",
+          "named": true
+        },
+        {
+          "type": "subtraction_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "field_access",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "field_name",
+          "named": true
+        },
+        {
+          "type": "record_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "field_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "field_ident",
+          "named": true
+        },
+        {
+          "type": "subfield_access",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "float_conv",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "float_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "fmperform_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "afterlast",
+          "named": true
+        },
+        {
+          "type": "beforefirst",
+          "named": true
+        },
+        {
+          "type": "bottomrecord",
+          "named": true
+        },
+        {
+          "type": "change",
+          "named": true
+        },
+        {
+          "type": "create",
+          "named": true
+        },
+        {
+          "type": "delete",
+          "named": true
+        },
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "fmperform",
+          "named": true
+        },
+        {
+          "type": "fmperform_statement",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "loc",
+          "named": true
+        },
+        {
+          "type": "record",
+          "named": true
+        },
+        {
+          "type": "revise",
+          "named": true
+        },
+        {
+          "type": "slid",
+          "named": true
+        },
+        {
+          "type": "subrecord",
+          "named": true
+        },
+        {
+          "type": "targetfile",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fmperform_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "clearwarning",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "field_name",
+          "named": true
+        },
+        {
+          "type": "from",
+          "named": true
+        },
+        {
+          "type": "insert",
+          "named": true
+        },
+        {
+          "type": "into",
+          "named": true
+        },
+        {
+          "type": "queue",
+          "named": true
+        },
+        {
+          "type": "remove",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "setwarning",
+          "named": true
+        },
+        {
+          "type": "to",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "by",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "for",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "to",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "for_",
+          "named": true
+        },
+        {
+          "type": "for_each",
+          "named": true
+        },
+        {
+          "type": "for_each_with",
+          "named": true
+        },
+        {
+          "type": "for_record",
+          "named": true
+        },
+        {
+          "type": "for_with",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "until_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_each",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "each",
+          "named": true
+        },
+        {
+          "type": "for",
+          "named": true
+        },
+        {
+          "type": "record_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_each_with",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean_expression",
+          "named": true
+        },
+        {
+          "type": "each",
+          "named": true
+        },
+        {
+          "type": "for",
+          "named": true
+        },
+        {
+          "type": "record_name",
+          "named": true
+        },
+        {
+          "type": "with",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_record",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "for",
+          "named": true
+        },
+        {
+          "type": "record",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_with",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "for",
+          "named": true
+        },
+        {
+          "type": "record_name",
+          "named": true
+        },
+        {
+          "type": "uniquekey",
+          "named": true
+        },
+        {
+          "type": "with",
+          "named": true
+        },
+        {
+          "type": "with_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "formlength_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "formlength",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_call",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "record_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "abs",
+          "named": true
+        },
+        {
+          "type": "anyservice",
+          "named": true
+        },
+        {
+          "type": "anywarning",
+          "named": true
+        },
+        {
+          "type": "capitalize",
+          "named": true
+        },
+        {
+          "type": "characterread",
+          "named": true
+        },
+        {
+          "type": "charactersearch",
+          "named": true
+        },
+        {
+          "type": "chrvalue",
+          "named": true
+        },
+        {
+          "type": "coderead",
+          "named": true
+        },
+        {
+          "type": "copyapp",
+          "named": true
+        },
+        {
+          "type": "createfinancefromcredrep",
+          "named": true
+        },
+        {
+          "type": "ctrlchr",
+          "named": true
+        },
+        {
+          "type": "date_conv",
+          "named": true
+        },
+        {
+          "type": "dateoffset",
+          "named": true
+        },
+        {
+          "type": "dateread",
+          "named": true
+        },
+        {
+          "type": "datevalue",
+          "named": true
+        },
+        {
+          "type": "day",
+          "named": true
+        },
+        {
+          "type": "dayofweek",
+          "named": true
+        },
+        {
+          "type": "dialogpromptchar",
+          "named": true
+        },
+        {
+          "type": "dialogpromptcode",
+          "named": true
+        },
+        {
+          "type": "dialogpromptcombooption",
+          "named": true
+        },
+        {
+          "type": "dialogpromptcombostart",
+          "named": true
+        },
+        {
+          "type": "dialogpromptdate",
+          "named": true
+        },
+        {
+          "type": "dialogpromptlistoption",
+          "named": true
+        },
+        {
+          "type": "dialogpromptliststart",
+          "named": true
+        },
+        {
+          "type": "dialogpromptmoney",
+          "named": true
+        },
+        {
+          "type": "dialogpromptnumber",
+          "named": true
+        },
+        {
+          "type": "dialogpromptpassword",
+          "named": true
+        },
+        {
+          "type": "dialogpromptrate",
+          "named": true
+        },
+        {
+          "type": "dialogpromptyesno",
+          "named": true
+        },
+        {
+          "type": "dialogstart",
+          "named": true
+        },
+        {
+          "type": "dialogstartgroupbox",
+          "named": true
+        },
+        {
+          "type": "dialogtextlistoption",
+          "named": true
+        },
+        {
+          "type": "dialogtextliststart",
+          "named": true
+        },
+        {
+          "type": "divprojectinit",
+          "named": true
+        },
+        {
+          "type": "emailline",
+          "named": true
+        },
+        {
+          "type": "emailsend",
+          "named": true
+        },
+        {
+          "type": "emailstart",
+          "named": true
+        },
+        {
+          "type": "entercharacter",
+          "named": true
+        },
+        {
+          "type": "entercode",
+          "named": true
+        },
+        {
+          "type": "enterdate",
+          "named": true
+        },
+        {
+          "type": "enterline",
+          "named": true
+        },
+        {
+          "type": "entermoney",
+          "named": true
+        },
+        {
+          "type": "enternumber",
+          "named": true
+        },
+        {
+          "type": "enterrate",
+          "named": true
+        },
+        {
+          "type": "enteryesno",
+          "named": true
+        },
+        {
+          "type": "execute",
+          "named": true
+        },
+        {
+          "type": "exp",
+          "named": true
+        },
+        {
+          "type": "filearchiveadd",
+          "named": true
+        },
+        {
+          "type": "filearchiveextract",
+          "named": true
+        },
+        {
+          "type": "fileclose",
+          "named": true
+        },
+        {
+          "type": "filecreate",
+          "named": true
+        },
+        {
+          "type": "filedecrypt",
+          "named": true
+        },
+        {
+          "type": "filedelete",
+          "named": true
+        },
+        {
+          "type": "fileencrypt",
+          "named": true
+        },
+        {
+          "type": "filegetpos",
+          "named": true
+        },
+        {
+          "type": "filelistclose",
+          "named": true
+        },
+        {
+          "type": "filelistopen",
+          "named": true
+        },
+        {
+          "type": "filelistread",
+          "named": true
+        },
+        {
+          "type": "fileopen",
+          "named": true
+        },
+        {
+          "type": "fileread",
+          "named": true
+        },
+        {
+          "type": "filereadline",
+          "named": true
+        },
+        {
+          "type": "filesetpos",
+          "named": true
+        },
+        {
+          "type": "filewriteline",
+          "named": true
+        },
+        {
+          "type": "float_conv",
+          "named": true
+        },
+        {
+          "type": "floatvalue",
+          "named": true
+        },
+        {
+          "type": "floor",
+          "named": true
+        },
+        {
+          "type": "format",
+          "named": true
+        },
+        {
+          "type": "ftpclose",
+          "named": true
+        },
+        {
+          "type": "ftpcmd",
+          "named": true
+        },
+        {
+          "type": "ftpget",
+          "named": true
+        },
+        {
+          "type": "ftplogin",
+          "named": true
+        },
+        {
+          "type": "ftpopen",
+          "named": true
+        },
+        {
+          "type": "ftpput",
+          "named": true
+        },
+        {
+          "type": "fullyear",
+          "named": true
+        },
+        {
+          "type": "getdatachar",
+          "named": true
+        },
+        {
+          "type": "getdatadate",
+          "named": true
+        },
+        {
+          "type": "getdatamoney",
+          "named": true
+        },
+        {
+          "type": "getdatanumber",
+          "named": true
+        },
+        {
+          "type": "getdatarate",
+          "named": true
+        },
+        {
+          "type": "getfieldatatype",
+          "named": true
+        },
+        {
+          "type": "getfielddatamax",
+          "named": true
+        },
+        {
+          "type": "getfieldhelpfile",
+          "named": true
+        },
+        {
+          "type": "getfieldmnemonic",
+          "named": true
+        },
+        {
+          "type": "getfieldname",
+          "named": true
+        },
+        {
+          "type": "getfieldnumber",
+          "named": true
+        },
+        {
+          "type": "hour",
+          "named": true
+        },
+        {
+          "type": "hpboxdraw",
+          "named": true
+        },
+        {
+          "type": "hpesc",
+          "named": true
+        },
+        {
+          "type": "hpfont",
+          "named": true
+        },
+        {
+          "type": "hplinedraw",
+          "named": true
+        },
+        {
+          "type": "hplinesperinch",
+          "named": true
+        },
+        {
+          "type": "hpreset",
+          "named": true
+        },
+        {
+          "type": "hpsetup",
+          "named": true
+        },
+        {
+          "type": "hpunderline",
+          "named": true
+        },
+        {
+          "type": "hpxpos",
+          "named": true
+        },
+        {
+          "type": "hpypos",
+          "named": true
+        },
+        {
+          "type": "htmlviewline",
+          "named": true
+        },
+        {
+          "type": "initcreditreport",
+          "named": true
+        },
+        {
+          "type": "initsubroutine",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "length",
+          "named": true
+        },
+        {
+          "type": "loanprojectinit",
+          "named": true
+        },
+        {
+          "type": "log",
+          "named": true
+        },
+        {
+          "type": "lowercase",
+          "named": true
+        },
+        {
+          "type": "md5hash",
+          "named": true
+        },
+        {
+          "type": "minute",
+          "named": true
+        },
+        {
+          "type": "mod",
+          "named": true
+        },
+        {
+          "type": "money_conv",
+          "named": true
+        },
+        {
+          "type": "moneyread",
+          "named": true
+        },
+        {
+          "type": "month",
+          "named": true
+        },
+        {
+          "type": "number_conv",
+          "named": true
+        },
+        {
+          "type": "numberread",
+          "named": true
+        },
+        {
+          "type": "outputclose",
+          "named": true
+        },
+        {
+          "type": "outputopen",
+          "named": true
+        },
+        {
+          "type": "outputswitch",
+          "named": true
+        },
+        {
+          "type": "passwordhash",
+          "named": true
+        },
+        {
+          "type": "popupmessage",
+          "named": true
+        },
+        {
+          "type": "pwr",
+          "named": true
+        },
+        {
+          "type": "queuecreditreport",
+          "named": true
+        },
+        {
+          "type": "rate_conv",
+          "named": true
+        },
+        {
+          "type": "rateread",
+          "named": true
+        },
+        {
+          "type": "repeatchr",
+          "named": true
+        },
+        {
+          "type": "screenxypos",
+          "named": true
+        },
+        {
+          "type": "sysusername",
+          "named": true
+        },
+        {
+          "type": "uppercase",
+          "named": true
+        },
+        {
+          "type": "value",
+          "named": true
+        },
+        {
+          "type": "winddeconnect",
+          "named": true
+        },
+        {
+          "type": "winddedisconnect",
+          "named": true
+        },
+        {
+          "type": "winddeexecute",
+          "named": true
+        },
+        {
+          "type": "winddepokedata",
+          "named": true
+        },
+        {
+          "type": "windowssend",
+          "named": true
+        },
+        {
+          "type": "winmessagefield",
+          "named": true
+        },
+        {
+          "type": "winmessagesend",
+          "named": true
+        },
+        {
+          "type": "winmessagestart",
+          "named": true
+        },
+        {
+          "type": "winmodetext",
+          "named": true
+        },
+        {
+          "type": "winmodewindows",
+          "named": true
+        },
+        {
+          "type": "year",
+          "named": true
+        },
+        {
+          "type": "yesnoprompt",
+          "named": true
+        },
+        {
+          "type": "yesnoread",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "header_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "header",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "headers_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "headers",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array_access",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean_expression",
+          "named": true
+        },
+        {
+          "type": "else_statement",
+          "named": true
+        },
+        {
+          "type": "if",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "then",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "include",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "letter_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "letter",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "title_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mode_keyword",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "accountchange",
+          "named": true
+        },
+        {
+          "type": "acs",
+          "named": true
+        },
+        {
+          "type": "atmdialog",
+          "named": true
+        },
+        {
+          "type": "audio",
+          "named": true
+        },
+        {
+          "type": "batch",
+          "named": true
+        },
+        {
+          "type": "cardcreationwizard",
+          "named": true
+        },
+        {
+          "type": "certificate",
+          "named": true
+        },
+        {
+          "type": "checkdisbursedwizard",
+          "named": true
+        },
+        {
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "customforms",
+          "named": true
+        },
+        {
+          "type": "customformswindows",
+          "named": true
+        },
+        {
+          "type": "demand",
+          "named": true
+        },
+        {
+          "type": "excpitem",
+          "named": true
+        },
+        {
+          "type": "homebanking",
+          "named": true
+        },
+        {
+          "type": "mcw",
+          "named": true
+        },
+        {
+          "type": "mcwinteractive",
+          "named": true
+        },
+        {
+          "type": "stateless",
+          "named": true
+        },
+        {
+          "type": "subroutine",
+          "named": true
+        },
+        {
+          "type": "symconnect",
+          "named": true
+        },
+        {
+          "type": "validation",
+          "named": true
+        },
+        {
+          "type": "windows",
+          "named": true
+        },
+        {
+          "type": "windowsprint",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "money_conv",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "money_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "multiplication_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "date",
+          "named": true
+        },
+        {
+          "type": "division_expression",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "field_access",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "money",
+          "named": true
+        },
+        {
+          "type": "multiplication_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "rate",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "number",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "number_conv",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "number_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "participation",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "participationloan",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "primitive_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "character_type",
+          "named": true
+        },
+        {
+          "type": "date_type",
+          "named": true
+        },
+        {
+          "type": "float_type",
+          "named": true
+        },
+        {
+          "type": "money_type",
+          "named": true
+        },
+        {
+          "type": "number_type",
+          "named": true
+        },
+        {
+          "type": "rate_type",
+          "named": true
+        },
+        {
+          "type": "sized_character_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "print_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "print",
+          "named": true
+        },
+        {
+          "type": "print_datafile",
+          "named": true
+        },
+        {
+          "type": "print_labels",
+          "named": true
+        },
+        {
+          "type": "reportcategory",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "title_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "print_datafile",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ascii",
+          "named": true
+        },
+        {
+          "type": "blocksize",
+          "named": true
+        },
+        {
+          "type": "datafile",
+          "named": true
+        },
+        {
+          "type": "ebcdic",
+          "named": true
+        },
+        {
+          "type": "recordsize",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "print_labels",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "across",
+          "named": true
+        },
+        {
+          "type": "formlength",
+          "named": true
+        },
+        {
+          "type": "labels",
+          "named": true
+        },
+        {
+          "type": "width",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "print_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "print",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "printcontrol_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "printcontrol",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "procedure_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "procedure",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rate_conv",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "rate_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "record",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "account",
+          "named": true
+        },
+        {
+          "type": "achaddenda",
+          "named": true
+        },
+        {
+          "type": "achaddinfo",
+          "named": true
+        },
+        {
+          "type": "achedit",
+          "named": true
+        },
+        {
+          "type": "achitem",
+          "named": true
+        },
+        {
+          "type": "activity",
+          "named": true
+        },
+        {
+          "type": "agreement",
+          "named": true
+        },
+        {
+          "type": "atmdialog",
+          "named": true
+        },
+        {
+          "type": "batchachorig",
+          "named": true
+        },
+        {
+          "type": "card",
+          "named": true
+        },
+        {
+          "type": "cashletter",
+          "named": true
+        },
+        {
+          "type": "cashorder",
+          "named": true
+        },
+        {
+          "type": "cdmdialog",
+          "named": true
+        },
+        {
+          "type": "check",
+          "named": true
+        },
+        {
+          "type": "collateral",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "corptransfer",
+          "named": true
+        },
+        {
+          "type": "cpworkcard",
+          "named": true
+        },
+        {
+          "type": "credrep",
+          "named": true
+        },
+        {
+          "type": "ctr",
+          "named": true
+        },
+        {
+          "type": "ctraccount",
+          "named": true
+        },
+        {
+          "type": "ctrbranch",
+          "named": true
+        },
+        {
+          "type": "ctrforeign",
+          "named": true
+        },
+        {
+          "type": "ctrperson",
+          "named": true
+        },
+        {
+          "type": "dealer",
+          "named": true
+        },
+        {
+          "type": "eft",
+          "named": true
+        },
+        {
+          "type": "excpaddenda",
+          "named": true
+        },
+        {
+          "type": "excpaddinfo",
+          "named": true
+        },
+        {
+          "type": "excpitem",
+          "named": true
+        },
+        {
+          "type": "externalaccount",
+          "named": true
+        },
+        {
+          "type": "externalloan",
+          "named": true
+        },
+        {
+          "type": "fmhistory",
+          "named": true
+        },
+        {
+          "type": "glaccount",
+          "named": true
+        },
+        {
+          "type": "glentry",
+          "named": true
+        },
+        {
+          "type": "glhistory",
+          "named": true
+        },
+        {
+          "type": "glsubaccount",
+          "named": true
+        },
+        {
+          "type": "gltran",
+          "named": true
+        },
+        {
+          "type": "household",
+          "named": true
+        },
+        {
+          "type": "inventory",
+          "named": true
+        },
+        {
+          "type": "invoice",
+          "named": true
+        },
+        {
+          "type": "irs",
+          "named": true
+        },
+        {
+          "type": "loan",
+          "named": true
+        },
+        {
+          "type": "loanapp",
+          "named": true
+        },
+        {
+          "type": "lookup",
+          "named": true
+        },
+        {
+          "type": "mbraddress",
+          "named": true
+        },
+        {
+          "type": "memberrec",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "nonacctname",
+          "named": true
+        },
+        {
+          "type": "note",
+          "named": true
+        },
+        {
+          "type": "participant",
+          "named": true
+        },
+        {
+          "type": "participation",
+          "named": true
+        },
+        {
+          "type": "participationloan",
+          "named": true
+        },
+        {
+          "type": "payee",
+          "named": true
+        },
+        {
+          "type": "portfolio",
+          "named": true
+        },
+        {
+          "type": "preference",
+          "named": true
+        },
+        {
+          "type": "receiveditem",
+          "named": true
+        },
+        {
+          "type": "remittance",
+          "named": true
+        },
+        {
+          "type": "reserveplan",
+          "named": true
+        },
+        {
+          "type": "share",
+          "named": true
+        },
+        {
+          "type": "site",
+          "named": true
+        },
+        {
+          "type": "tracking",
+          "named": true
+        },
+        {
+          "type": "user",
+          "named": true
+        },
+        {
+          "type": "vendor",
+          "named": true
+        },
+        {
+          "type": "westernunion",
+          "named": true
+        },
+        {
+          "type": "wire",
+          "named": true
+        },
+        {
+          "type": "worklistedit",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bottomrecord",
+          "named": true
+        },
+        {
+          "type": "record",
+          "named": true
+        },
+        {
+          "type": "subrecord",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "recordsize_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "recordsize",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reportcategory_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "reportcategory",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "select_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "all",
+          "named": true
+        },
+        {
+          "type": "boolean_expression",
+          "named": true
+        },
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "every",
+          "named": true
+        },
+        {
+          "type": "none",
+          "named": true
+        },
+        {
+          "type": "select",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "setup_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "setup",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "share",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "sized_character_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "character_type",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sort_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "field_access",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "sort",
+          "named": true
+        },
+        {
+          "type": "subtotal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "define_block",
+          "named": true
+        },
+        {
+          "type": "include_statement",
+          "named": true
+        },
+        {
+          "type": "letter_block",
+          "named": true
+        },
+        {
+          "type": "print_block",
+          "named": true
+        },
+        {
+          "type": "procedure_block",
+          "named": true
+        },
+        {
+          "type": "select_block",
+          "named": true
+        },
+        {
+          "type": "setup_block",
+          "named": true
+        },
+        {
+          "type": "sort_block",
+          "named": true
+        },
+        {
+          "type": "target_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "across_statement",
+          "named": true
+        },
+        {
+          "type": "assignment_statement",
+          "named": true
+        },
+        {
+          "type": "bell",
+          "named": true
+        },
+        {
+          "type": "blink",
+          "named": true
+        },
+        {
+          "type": "blocksize_statement",
+          "named": true
+        },
+        {
+          "type": "bright",
+          "named": true
+        },
+        {
+          "type": "call_statement",
+          "named": true
+        },
+        {
+          "type": "col_statement",
+          "named": true
+        },
+        {
+          "type": "datasize_statement",
+          "named": true
+        },
+        {
+          "type": "dialogclose",
+          "named": true
+        },
+        {
+          "type": "dialogdisplay",
+          "named": true
+        },
+        {
+          "type": "dialogendgroupbox",
+          "named": true
+        },
+        {
+          "type": "dialogendgrouping",
+          "named": true
+        },
+        {
+          "type": "dialogintrotext",
+          "named": true
+        },
+        {
+          "type": "dialognewcolumn",
+          "named": true
+        },
+        {
+          "type": "dialogpromptcomboend",
+          "named": true
+        },
+        {
+          "type": "dialogpromptlistend",
+          "named": true
+        },
+        {
+          "type": "dialogstartgrouping",
+          "named": true
+        },
+        {
+          "type": "dialogtextlistend",
+          "named": true
+        },
+        {
+          "type": "dim",
+          "named": true
+        },
+        {
+          "type": "divprojectcalc",
+          "named": true
+        },
+        {
+          "type": "do_block",
+          "named": true
+        },
+        {
+          "type": "enterdelimiter",
+          "named": true
+        },
+        {
+          "type": "fmperform_block",
+          "named": true
+        },
+        {
+          "type": "for_block",
+          "named": true
+        },
+        {
+          "type": "formlength_statement",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "header",
+          "named": true
+        },
+        {
+          "type": "header_statement",
+          "named": true
+        },
+        {
+          "type": "headers_block",
+          "named": true
+        },
+        {
+          "type": "htmlviewdisplay",
+          "named": true
+        },
+        {
+          "type": "htmlviewopen",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "include_statement",
+          "named": true
+        },
+        {
+          "type": "liveinstcheck",
+          "named": true
+        },
+        {
+          "type": "loanprojectcalc",
+          "named": true
+        },
+        {
+          "type": "newline",
+          "named": true
+        },
+        {
+          "type": "newpage",
+          "named": true
+        },
+        {
+          "type": "nonansistandard",
+          "named": true
+        },
+        {
+          "type": "overdrawavailablecalc",
+          "named": true
+        },
+        {
+          "type": "overdrawavailableinit",
+          "named": true
+        },
+        {
+          "type": "prevsystemdate",
+          "named": true
+        },
+        {
+          "type": "print_statement",
+          "named": true
+        },
+        {
+          "type": "printcontrol_statement",
+          "named": true
+        },
+        {
+          "type": "pullcreditreport",
+          "named": true
+        },
+        {
+          "type": "recordsize_statement",
+          "named": true
+        },
+        {
+          "type": "reportcategory_statement",
+          "named": true
+        },
+        {
+          "type": "stopblink",
+          "named": true
+        },
+        {
+          "type": "subtotal_statement",
+          "named": true
+        },
+        {
+          "type": "suppress",
+          "named": true
+        },
+        {
+          "type": "suppressnewline",
+          "named": true
+        },
+        {
+          "type": "sysactualdate",
+          "named": true
+        },
+        {
+          "type": "sysactualtime",
+          "named": true
+        },
+        {
+          "type": "sysclientnumber",
+          "named": true
+        },
+        {
+          "type": "sysconsolenum",
+          "named": true
+        },
+        {
+          "type": "syshostname",
+          "named": true
+        },
+        {
+          "type": "sysmemomode",
+          "named": true
+        },
+        {
+          "type": "syssymdirectory",
+          "named": true
+        },
+        {
+          "type": "systemdate",
+          "named": true
+        },
+        {
+          "type": "sysusernumber",
+          "named": true
+        },
+        {
+          "type": "syswindowslevel",
+          "named": true
+        },
+        {
+          "type": "terminate",
+          "named": true
+        },
+        {
+          "type": "title_statement",
+          "named": true
+        },
+        {
+          "type": "total_statement",
+          "named": true
+        },
+        {
+          "type": "trailers_block",
+          "named": true
+        },
+        {
+          "type": "tranperform_block",
+          "named": true
+        },
+        {
+          "type": "while_block",
+          "named": true
+        },
+        {
+          "type": "whilelimit_statement",
+          "named": true
+        },
+        {
+          "type": "width_statement",
+          "named": true
+        },
+        {
+          "type": "winmessagesend",
+          "named": true
+        },
+        {
+          "type": "winmodetext",
+          "named": true
+        },
+        {
+          "type": "winmodewindows",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subfield_access",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subrecord",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "access",
+          "named": true
+        },
+        {
+          "type": "addendainfo",
+          "named": true
+        },
+        {
+          "type": "analysis",
+          "named": true
+        },
+        {
+          "type": "analysisgroup",
+          "named": true
+        },
+        {
+          "type": "analysisplan",
+          "named": true
+        },
+        {
+          "type": "bankruptcy",
+          "named": true
+        },
+        {
+          "type": "beneficiaryadv",
+          "named": true
+        },
+        {
+          "type": "beneficiaryfiadv",
+          "named": true
+        },
+        {
+          "type": "beneficiaryfiinfo",
+          "named": true
+        },
+        {
+          "type": "beneficiaryinfo",
+          "named": true
+        },
+        {
+          "type": "cashordertype",
+          "named": true
+        },
+        {
+          "type": "checkorder",
+          "named": true
+        },
+        {
+          "type": "collhold",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "ctrtraninfo",
+          "named": true
+        },
+        {
+          "type": "distribution",
+          "named": true
+        },
+        {
+          "type": "document",
+          "named": true
+        },
+        {
+          "type": "drawdowndebitacctadv",
+          "named": true
+        },
+        {
+          "type": "escrow",
+          "named": true
+        },
+        {
+          "type": "escrowanalysis",
+          "named": true
+        },
+        {
+          "type": "finance",
+          "named": true
+        },
+        {
+          "type": "fitofiinfo",
+          "named": true
+        },
+        {
+          "type": "fmhistory",
+          "named": true
+        },
+        {
+          "type": "glhistory",
+          "named": true
+        },
+        {
+          "type": "hold",
+          "named": true
+        },
+        {
+          "type": "imtermedfiinfo",
+          "named": true
+        },
+        {
+          "type": "intermedfiadv",
+          "named": true
+        },
+        {
+          "type": "item",
+          "named": true
+        },
+        {
+          "type": "lnsegment",
+          "named": true
+        },
+        {
+          "type": "loan",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "note",
+          "named": true
+        },
+        {
+          "type": "ofacdetails",
+          "named": true
+        },
+        {
+          "type": "person",
+          "named": true
+        },
+        {
+          "type": "pledge",
+          "named": true
+        },
+        {
+          "type": "receiverfiinfo",
+          "named": true
+        },
+        {
+          "type": "schedule",
+          "named": true
+        },
+        {
+          "type": "servicemessage",
+          "named": true
+        },
+        {
+          "type": "tracking",
+          "named": true
+        },
+        {
+          "type": "transaction",
+          "named": true
+        },
+        {
+          "type": "transfer",
+          "named": true
+        },
+        {
+          "type": "uscauditinfo",
+          "named": true
+        },
+        {
+          "type": "worklistfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subtotal_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "subtotal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subtraction_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "addition_expression",
+          "named": true
+        },
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "date",
+          "named": true
+        },
+        {
+          "type": "division_expression",
+          "named": true
+        },
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "field_access",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "money",
+          "named": true
+        },
+        {
+          "type": "multiplication_expression",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "rate",
+          "named": true
+        },
+        {
+          "type": "subtraction_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "target_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "mode_keyword",
+          "named": true
+        },
+        {
+          "type": "record_name",
+          "named": true
+        },
+        {
+          "type": "target",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "title_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "title",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "total_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "total",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "trailers_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "trailers",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tranperform_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "do",
+          "named": true
+        },
+        {
+          "type": "end",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "trancode",
+          "named": true
+        },
+        {
+          "type": "tranperform",
+          "named": true
+        },
+        {
+          "type": "tranperform_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tranperform_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "field_name",
+          "named": true
+        },
+        {
+          "type": "set",
+          "named": true
+        },
+        {
+          "type": "to",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "array_type",
+          "named": true
+        },
+        {
+          "type": "const_type",
+          "named": true
+        },
+        {
+          "type": "primitive_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "until_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean_expression",
+          "named": true
+        },
+        {
+          "type": "until",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "type_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "while_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "boolean_expression",
+          "named": true
+        },
+        {
+          "type": "statement",
+          "named": true
+        },
+        {
+          "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "whilelimit_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "whilelimit",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "width_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression",
+          "named": true
+        },
+        {
+          "type": "width",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": "<>",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "abs",
+    "named": true
+  },
+  {
+    "type": "access",
+    "named": true
+  },
+  {
+    "type": "account",
+    "named": true
+  },
+  {
+    "type": "accountchange",
+    "named": true
+  },
+  {
+    "type": "achaddenda",
+    "named": true
+  },
+  {
+    "type": "achaddinfo",
+    "named": true
+  },
+  {
+    "type": "achedit",
+    "named": true
+  },
+  {
+    "type": "achitem",
+    "named": true
+  },
+  {
+    "type": "across",
+    "named": true
+  },
+  {
+    "type": "acs",
+    "named": true
+  },
+  {
+    "type": "activity",
+    "named": true
+  },
+  {
+    "type": "addendainfo",
+    "named": true
+  },
+  {
+    "type": "afterlast",
+    "named": true
+  },
+  {
+    "type": "agreement",
+    "named": true
+  },
+  {
+    "type": "all",
+    "named": true
+  },
+  {
+    "type": "analysis",
+    "named": true
+  },
+  {
+    "type": "analysisgroup",
+    "named": true
+  },
+  {
+    "type": "analysisplan",
+    "named": true
+  },
+  {
+    "type": "and",
+    "named": true
+  },
+  {
+    "type": "any",
+    "named": true
+  },
+  {
+    "type": "anyservice",
+    "named": true
+  },
+  {
+    "type": "anywarning",
+    "named": true
+  },
+  {
+    "type": "ascii",
+    "named": true
+  },
+  {
+    "type": "atmdialog",
+    "named": true
+  },
+  {
+    "type": "audio",
+    "named": true
+  },
+  {
+    "type": "bankruptcy",
+    "named": true
+  },
+  {
+    "type": "batch",
+    "named": true
+  },
+  {
+    "type": "batchachorig",
+    "named": true
+  },
+  {
+    "type": "beforefirst",
+    "named": true
+  },
+  {
+    "type": "bell",
+    "named": true
+  },
+  {
+    "type": "beneficiaryadv",
+    "named": true
+  },
+  {
+    "type": "beneficiaryfiadv",
+    "named": true
+  },
+  {
+    "type": "beneficiaryfiinfo",
+    "named": true
+  },
+  {
+    "type": "beneficiaryinfo",
+    "named": true
+  },
+  {
+    "type": "blink",
+    "named": true
+  },
+  {
+    "type": "blocksize",
+    "named": true
+  },
+  {
+    "type": "bright",
+    "named": true
+  },
+  {
+    "type": "by",
+    "named": true
+  },
+  {
+    "type": "call",
+    "named": true
+  },
+  {
+    "type": "capitalize",
+    "named": true
+  },
+  {
+    "type": "card",
+    "named": true
+  },
+  {
+    "type": "cardcreationwizard",
+    "named": true
+  },
+  {
+    "type": "cashletter",
+    "named": true
+  },
+  {
+    "type": "cashorder",
+    "named": true
+  },
+  {
+    "type": "cashordertype",
+    "named": true
+  },
+  {
+    "type": "cdmdialog",
+    "named": true
+  },
+  {
+    "type": "certificate",
+    "named": true
+  },
+  {
+    "type": "change",
+    "named": true
+  },
+  {
+    "type": "character",
+    "named": true
+  },
+  {
+    "type": "character_type",
+    "named": true
+  },
+  {
+    "type": "characterread",
+    "named": true
+  },
+  {
+    "type": "charactersearch",
+    "named": true
+  },
+  {
+    "type": "check",
+    "named": true
+  },
+  {
+    "type": "checkdisbursedwizard",
+    "named": true
+  },
+  {
+    "type": "checkorder",
+    "named": true
+  },
+  {
+    "type": "chrvalue",
+    "named": true
+  },
+  {
+    "type": "clearwarning",
+    "named": true
+  },
+  {
+    "type": "coderead",
+    "named": true
+  },
+  {
+    "type": "col",
+    "named": true
+  },
+  {
+    "type": "collateral",
+    "named": true
+  },
+  {
+    "type": "collection",
+    "named": true
+  },
+  {
+    "type": "collhold",
+    "named": true
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "comment_block",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "copyapp",
+    "named": true
+  },
+  {
+    "type": "corptransfer",
+    "named": true
+  },
+  {
+    "type": "cpworkcard",
+    "named": true
+  },
+  {
+    "type": "create",
+    "named": true
+  },
+  {
+    "type": "createfinancefromcredrep",
+    "named": true
+  },
+  {
+    "type": "credrep",
+    "named": true
+  },
+  {
+    "type": "ctr",
+    "named": true
+  },
+  {
+    "type": "ctraccount",
+    "named": true
+  },
+  {
+    "type": "ctrbranch",
+    "named": true
+  },
+  {
+    "type": "ctrforeign",
+    "named": true
+  },
+  {
+    "type": "ctrlchr",
+    "named": true
+  },
+  {
+    "type": "ctrperson",
+    "named": true
+  },
+  {
+    "type": "ctrtraninfo",
+    "named": true
+  },
+  {
+    "type": "customforms",
+    "named": true
+  },
+  {
+    "type": "customformswindows",
+    "named": true
+  },
+  {
+    "type": "datafile",
+    "named": true
+  },
+  {
+    "type": "datasize",
+    "named": true
+  },
+  {
+    "type": "date",
+    "named": true
+  },
+  {
+    "type": "dateoffset",
+    "named": true
+  },
+  {
+    "type": "dateread",
+    "named": true
+  },
+  {
+    "type": "datevalue",
+    "named": true
+  },
+  {
+    "type": "day",
+    "named": true
+  },
+  {
+    "type": "dayofweek",
+    "named": true
+  },
+  {
+    "type": "dealer",
+    "named": true
+  },
+  {
+    "type": "define",
+    "named": true
+  },
+  {
+    "type": "delete",
+    "named": true
+  },
+  {
+    "type": "demand",
+    "named": true
+  },
+  {
+    "type": "dialogclose",
+    "named": true
+  },
+  {
+    "type": "dialogdisplay",
+    "named": true
+  },
+  {
+    "type": "dialogendgroupbox",
+    "named": true
+  },
+  {
+    "type": "dialogendgrouping",
+    "named": true
+  },
+  {
+    "type": "dialogintrotext",
+    "named": true
+  },
+  {
+    "type": "dialognewcolumn",
+    "named": true
+  },
+  {
+    "type": "dialogpromptchar",
+    "named": true
+  },
+  {
+    "type": "dialogpromptcode",
+    "named": true
+  },
+  {
+    "type": "dialogpromptcomboend",
+    "named": true
+  },
+  {
+    "type": "dialogpromptcombooption",
+    "named": true
+  },
+  {
+    "type": "dialogpromptcombostart",
+    "named": true
+  },
+  {
+    "type": "dialogpromptdate",
+    "named": true
+  },
+  {
+    "type": "dialogpromptlistend",
+    "named": true
+  },
+  {
+    "type": "dialogpromptlistoption",
+    "named": true
+  },
+  {
+    "type": "dialogpromptliststart",
+    "named": true
+  },
+  {
+    "type": "dialogpromptmoney",
+    "named": true
+  },
+  {
+    "type": "dialogpromptnumber",
+    "named": true
+  },
+  {
+    "type": "dialogpromptpassword",
+    "named": true
+  },
+  {
+    "type": "dialogpromptrate",
+    "named": true
+  },
+  {
+    "type": "dialogpromptyesno",
+    "named": true
+  },
+  {
+    "type": "dialogstart",
+    "named": true
+  },
+  {
+    "type": "dialogstartgroupbox",
+    "named": true
+  },
+  {
+    "type": "dialogstartgrouping",
+    "named": true
+  },
+  {
+    "type": "dialogtextlistend",
+    "named": true
+  },
+  {
+    "type": "dialogtextlistoption",
+    "named": true
+  },
+  {
+    "type": "dialogtextliststart",
+    "named": true
+  },
+  {
+    "type": "dim",
+    "named": true
+  },
+  {
+    "type": "distribution",
+    "named": true
+  },
+  {
+    "type": "divprojectcalc",
+    "named": true
+  },
+  {
+    "type": "divprojectinit",
+    "named": true
+  },
+  {
+    "type": "do",
+    "named": true
+  },
+  {
+    "type": "document",
+    "named": true
+  },
+  {
+    "type": "drawdowndebitacctadv",
+    "named": true
+  },
+  {
+    "type": "each",
+    "named": true
+  },
+  {
+    "type": "ebcdic",
+    "named": true
+  },
+  {
+    "type": "else",
+    "named": true
+  },
+  {
+    "type": "emailline",
+    "named": true
+  },
+  {
+    "type": "emailsend",
+    "named": true
+  },
+  {
+    "type": "emailstart",
+    "named": true
+  },
+  {
+    "type": "end",
+    "named": true
+  },
+  {
+    "type": "entercharacter",
+    "named": true
+  },
+  {
+    "type": "entercode",
+    "named": true
+  },
+  {
+    "type": "enterdate",
+    "named": true
+  },
+  {
+    "type": "enterdelimiter",
+    "named": true
+  },
+  {
+    "type": "enterline",
+    "named": true
+  },
+  {
+    "type": "entermoney",
+    "named": true
+  },
+  {
+    "type": "enternumber",
+    "named": true
+  },
+  {
+    "type": "enterrate",
+    "named": true
+  },
+  {
+    "type": "enteryesno",
+    "named": true
+  },
+  {
+    "type": "escrow",
+    "named": true
+  },
+  {
+    "type": "escrowanalysis",
+    "named": true
+  },
+  {
+    "type": "excpaddenda",
+    "named": true
+  },
+  {
+    "type": "excpaddinfo",
+    "named": true
+  },
+  {
+    "type": "excpitem",
+    "named": true
+  },
+  {
+    "type": "execute",
+    "named": true
+  },
+  {
+    "type": "exp",
+    "named": true
+  },
+  {
+    "type": "externalaccount",
+    "named": true
+  },
+  {
+    "type": "externalloan",
+    "named": true
+  },
+  {
+    "type": "field_ident",
+    "named": true
+  },
+  {
+    "type": "filearchiveadd",
+    "named": true
+  },
+  {
+    "type": "filearchiveextract",
+    "named": true
+  },
+  {
+    "type": "fileclose",
+    "named": true
+  },
+  {
+    "type": "filecreate",
+    "named": true
+  },
+  {
+    "type": "filedecrypt",
+    "named": true
+  },
+  {
+    "type": "filedelete",
+    "named": true
+  },
+  {
+    "type": "fileencrypt",
+    "named": true
+  },
+  {
+    "type": "filegetpos",
+    "named": true
+  },
+  {
+    "type": "filelistclose",
+    "named": true
+  },
+  {
+    "type": "filelistopen",
+    "named": true
+  },
+  {
+    "type": "filelistread",
+    "named": true
+  },
+  {
+    "type": "fileopen",
+    "named": true
+  },
+  {
+    "type": "fileread",
+    "named": true
+  },
+  {
+    "type": "filereadline",
+    "named": true
+  },
+  {
+    "type": "filesetpos",
+    "named": true
+  },
+  {
+    "type": "filewriteline",
+    "named": true
+  },
+  {
+    "type": "finance",
+    "named": true
+  },
+  {
+    "type": "fitofiinfo",
+    "named": true
+  },
+  {
+    "type": "float",
+    "named": true
+  },
+  {
+    "type": "floatvalue",
+    "named": true
+  },
+  {
+    "type": "floor",
+    "named": true
+  },
+  {
+    "type": "fmhistory",
+    "named": true
+  },
+  {
+    "type": "fmperform",
+    "named": true
+  },
+  {
+    "type": "for",
+    "named": true
+  },
+  {
+    "type": "format",
+    "named": true
+  },
+  {
+    "type": "formlength",
+    "named": true
+  },
+  {
+    "type": "from",
+    "named": true
+  },
+  {
+    "type": "ftpclose",
+    "named": true
+  },
+  {
+    "type": "ftpcmd",
+    "named": true
+  },
+  {
+    "type": "ftpget",
+    "named": true
+  },
+  {
+    "type": "ftplogin",
+    "named": true
+  },
+  {
+    "type": "ftpopen",
+    "named": true
+  },
+  {
+    "type": "ftpput",
+    "named": true
+  },
+  {
+    "type": "fullyear",
+    "named": true
+  },
+  {
+    "type": "getdatachar",
+    "named": true
+  },
+  {
+    "type": "getdatadate",
+    "named": true
+  },
+  {
+    "type": "getdatamoney",
+    "named": true
+  },
+  {
+    "type": "getdatanumber",
+    "named": true
+  },
+  {
+    "type": "getdatarate",
+    "named": true
+  },
+  {
+    "type": "getfieldatatype",
+    "named": true
+  },
+  {
+    "type": "getfielddatamax",
+    "named": true
+  },
+  {
+    "type": "getfieldhelpfile",
+    "named": true
+  },
+  {
+    "type": "getfieldmnemonic",
+    "named": true
+  },
+  {
+    "type": "getfieldname",
+    "named": true
+  },
+  {
+    "type": "getfieldnumber",
+    "named": true
+  },
+  {
+    "type": "glaccount",
+    "named": true
+  },
+  {
+    "type": "glentry",
+    "named": true
+  },
+  {
+    "type": "glhistory",
+    "named": true
+  },
+  {
+    "type": "glsubaccount",
+    "named": true
+  },
+  {
+    "type": "gltran",
+    "named": true
+  },
+  {
+    "type": "header",
+    "named": true
+  },
+  {
+    "type": "headers",
+    "named": true
+  },
+  {
+    "type": "hold",
+    "named": true
+  },
+  {
+    "type": "homebanking",
+    "named": true
+  },
+  {
+    "type": "hour",
+    "named": true
+  },
+  {
+    "type": "household",
+    "named": true
+  },
+  {
+    "type": "hpboxdraw",
+    "named": true
+  },
+  {
+    "type": "hpesc",
+    "named": true
+  },
+  {
+    "type": "hpfont",
+    "named": true
+  },
+  {
+    "type": "hplinedraw",
+    "named": true
+  },
+  {
+    "type": "hplinesperinch",
+    "named": true
+  },
+  {
+    "type": "hpreset",
+    "named": true
+  },
+  {
+    "type": "hpsetup",
+    "named": true
+  },
+  {
+    "type": "hpunderline",
+    "named": true
+  },
+  {
+    "type": "hpxpos",
+    "named": true
+  },
+  {
+    "type": "hpypos",
+    "named": true
+  },
+  {
+    "type": "htmlviewdisplay",
+    "named": true
+  },
+  {
+    "type": "htmlviewline",
+    "named": true
+  },
+  {
+    "type": "htmlviewopen",
+    "named": true
+  },
+  {
+    "type": "if",
+    "named": true
+  },
+  {
+    "type": "imtermedfiinfo",
+    "named": true
+  },
+  {
+    "type": "include",
+    "named": true
+  },
+  {
+    "type": "initcreditreport",
+    "named": true
+  },
+  {
+    "type": "initsubroutine",
+    "named": true
+  },
+  {
+    "type": "insert",
+    "named": true
+  },
+  {
+    "type": "int",
+    "named": true
+  },
+  {
+    "type": "intermedfiadv",
+    "named": true
+  },
+  {
+    "type": "into",
+    "named": true
+  },
+  {
+    "type": "inventory",
+    "named": true
+  },
+  {
+    "type": "invoice",
+    "named": true
+  },
+  {
+    "type": "irs",
+    "named": true
+  },
+  {
+    "type": "item",
+    "named": true
+  },
+  {
+    "type": "labels",
+    "named": true
+  },
+  {
+    "type": "left",
+    "named": true
+  },
+  {
+    "type": "length",
+    "named": true
+  },
+  {
+    "type": "letter",
+    "named": true
+  },
+  {
+    "type": "liveinstcheck",
+    "named": true
+  },
+  {
+    "type": "lnsegment",
+    "named": true
+  },
+  {
+    "type": "loan",
+    "named": true
+  },
+  {
+    "type": "loanapp",
+    "named": true
+  },
+  {
+    "type": "loanprojectcalc",
+    "named": true
+  },
+  {
+    "type": "loanprojectinit",
+    "named": true
+  },
+  {
+    "type": "loc",
+    "named": true
+  },
+  {
+    "type": "log",
+    "named": true
+  },
+  {
+    "type": "lookup",
+    "named": true
+  },
+  {
+    "type": "lowercase",
+    "named": true
+  },
+  {
+    "type": "mbraddress",
+    "named": true
+  },
+  {
+    "type": "mcw",
+    "named": true
+  },
+  {
+    "type": "mcwinteractive",
+    "named": true
+  },
+  {
+    "type": "md5hash",
+    "named": true
+  },
+  {
+    "type": "memberrec",
+    "named": true
+  },
+  {
+    "type": "minute",
+    "named": true
+  },
+  {
+    "type": "mod",
+    "named": true
+  },
+  {
+    "type": "money",
+    "named": true
+  },
+  {
+    "type": "moneyread",
+    "named": true
+  },
+  {
+    "type": "month",
+    "named": true
+  },
+  {
+    "type": "name",
+    "named": true
+  },
+  {
+    "type": "newline",
+    "named": true
+  },
+  {
+    "type": "newpage",
+    "named": true
+  },
+  {
+    "type": "nonacctname",
+    "named": true
+  },
+  {
+    "type": "nonansistandard",
+    "named": true
+  },
+  {
+    "type": "none",
+    "named": true
+  },
+  {
+    "type": "not",
+    "named": true
+  },
+  {
+    "type": "note",
+    "named": true
+  },
+  {
+    "type": "numberread",
+    "named": true
+  },
+  {
+    "type": "ofacdetails",
+    "named": true
+  },
+  {
+    "type": "or",
+    "named": true
+  },
+  {
+    "type": "outputclose",
+    "named": true
+  },
+  {
+    "type": "outputopen",
+    "named": true
+  },
+  {
+    "type": "outputswitch",
+    "named": true
+  },
+  {
+    "type": "overdrawavailablecalc",
+    "named": true
+  },
+  {
+    "type": "overdrawavailableinit",
+    "named": true
+  },
+  {
+    "type": "participant",
+    "named": true
+  },
+  {
+    "type": "passwordhash",
+    "named": true
+  },
+  {
+    "type": "payee",
+    "named": true
+  },
+  {
+    "type": "person",
+    "named": true
+  },
+  {
+    "type": "pledge",
+    "named": true
+  },
+  {
+    "type": "popupmessage",
+    "named": true
+  },
+  {
+    "type": "portfolio",
+    "named": true
+  },
+  {
+    "type": "preference",
+    "named": true
+  },
+  {
+    "type": "prepetitionbal",
+    "named": true
+  },
+  {
+    "type": "prevsystemdate",
+    "named": true
+  },
+  {
+    "type": "print",
+    "named": true
+  },
+  {
+    "type": "printcontrol",
+    "named": true
+  },
+  {
+    "type": "procedure",
+    "named": true
+  },
+  {
+    "type": "pullcreditreport",
+    "named": true
+  },
+  {
+    "type": "pwr",
+    "named": true
+  },
+  {
+    "type": "queue",
+    "named": true
+  },
+  {
+    "type": "queuecreditreport",
+    "named": true
+  },
+  {
+    "type": "rate",
+    "named": true
+  },
+  {
+    "type": "rateread",
+    "named": true
+  },
+  {
+    "type": "receiveditem",
+    "named": true
+  },
+  {
+    "type": "receiverfiinfo",
+    "named": true
+  },
+  {
+    "type": "recordsize",
+    "named": true
+  },
+  {
+    "type": "remittance",
+    "named": true
+  },
+  {
+    "type": "remove",
+    "named": true
+  },
+  {
+    "type": "repeatchr",
+    "named": true
+  },
+  {
+    "type": "reportcategory",
+    "named": true
+  },
+  {
+    "type": "reserveplan",
+    "named": true
+  },
+  {
+    "type": "revise",
+    "named": true
+  },
+  {
+    "type": "right",
+    "named": true
+  },
+  {
+    "type": "schedule",
+    "named": true
+  },
+  {
+    "type": "screenxypos",
+    "named": true
+  },
+  {
+    "type": "select",
+    "named": true
+  },
+  {
+    "type": "servicemessage",
+    "named": true
+  },
+  {
+    "type": "set",
+    "named": true
+  },
+  {
+    "type": "setup",
+    "named": true
+  },
+  {
+    "type": "setwarning",
+    "named": true
+  },
+  {
+    "type": "site",
+    "named": true
+  },
+  {
+    "type": "slid",
+    "named": true
+  },
+  {
+    "type": "sort",
+    "named": true
+  },
+  {
+    "type": "starting",
+    "named": true
+  },
+  {
+    "type": "stateless",
+    "named": true
+  },
+  {
+    "type": "stopblink",
+    "named": true
+  },
+  {
+    "type": "subroutine",
+    "named": true
+  },
+  {
+    "type": "subtotal",
+    "named": true
+  },
+  {
+    "type": "suppress",
+    "named": true
+  },
+  {
+    "type": "suppressnewline",
+    "named": true
+  },
+  {
+    "type": "symconnect",
+    "named": true
+  },
+  {
+    "type": "sysactualdate",
+    "named": true
+  },
+  {
+    "type": "sysactualtime",
+    "named": true
+  },
+  {
+    "type": "sysclientnumber",
+    "named": true
+  },
+  {
+    "type": "sysconsolenum",
+    "named": true
+  },
+  {
+    "type": "syshostname",
+    "named": true
+  },
+  {
+    "type": "sysmemomode",
+    "named": true
+  },
+  {
+    "type": "syssymdirectory",
+    "named": true
+  },
+  {
+    "type": "systemdate",
+    "named": true
+  },
+  {
+    "type": "sysusername",
+    "named": true
+  },
+  {
+    "type": "sysusernumber",
+    "named": true
+  },
+  {
+    "type": "syswindowslevel",
+    "named": true
+  },
+  {
+    "type": "target",
+    "named": true
+  },
+  {
+    "type": "targetfile",
+    "named": true
+  },
+  {
+    "type": "terminate",
+    "named": true
+  },
+  {
+    "type": "then",
+    "named": true
+  },
+  {
+    "type": "title",
+    "named": true
+  },
+  {
+    "type": "to",
+    "named": true
+  },
+  {
+    "type": "total",
+    "named": true
+  },
+  {
+    "type": "tracking",
+    "named": true
+  },
+  {
+    "type": "trailers",
+    "named": true
+  },
+  {
+    "type": "trancode",
+    "named": true
+  },
+  {
+    "type": "tranperform",
+    "named": true
+  },
+  {
+    "type": "transaction",
+    "named": true
+  },
+  {
+    "type": "transfer",
+    "named": true
+  },
+  {
+    "type": "uniquekey",
+    "named": true
+  },
+  {
+    "type": "until",
+    "named": true
+  },
+  {
+    "type": "uppercase",
+    "named": true
+  },
+  {
+    "type": "uscauditinfo",
+    "named": true
+  },
+  {
+    "type": "user",
+    "named": true
+  },
+  {
+    "type": "validation",
+    "named": true
+  },
+  {
+    "type": "value",
+    "named": true
+  },
+  {
+    "type": "vendor",
+    "named": true
+  },
+  {
+    "type": "westernunion",
+    "named": true
+  },
+  {
+    "type": "while",
+    "named": true
+  },
+  {
+    "type": "whilelimit",
+    "named": true
+  },
+  {
+    "type": "width",
+    "named": true
+  },
+  {
+    "type": "winddeconnect",
+    "named": true
+  },
+  {
+    "type": "winddedisconnect",
+    "named": true
+  },
+  {
+    "type": "winddeexecute",
+    "named": true
+  },
+  {
+    "type": "winddepokedata",
+    "named": true
+  },
+  {
+    "type": "windows",
+    "named": true
+  },
+  {
+    "type": "windowsprint",
+    "named": true
+  },
+  {
+    "type": "windowssend",
+    "named": true
+  },
+  {
+    "type": "winmessagefield",
+    "named": true
+  },
+  {
+    "type": "winmessagesend",
+    "named": true
+  },
+  {
+    "type": "winmessagestart",
+    "named": true
+  },
+  {
+    "type": "winmodetext",
+    "named": true
+  },
+  {
+    "type": "winmodewindows",
+    "named": true
+  },
+  {
+    "type": "wire",
+    "named": true
+  },
+  {
+    "type": "with",
+    "named": true
+  },
+  {
+    "type": "with_field",
+    "named": true
+  },
+  {
+    "type": "worklistedit",
+    "named": true
+  },
+  {
+    "type": "worklistfield",
+    "named": true
+  },
+  {
+    "type": "wrap",
+    "named": true
+  },
+  {
+    "type": "year",
+    "named": true
+  },
+  {
+    "type": "yesnoprompt",
+    "named": true
+  },
+  {
+    "type": "yesnoread",
+    "named": true
+  }
+]

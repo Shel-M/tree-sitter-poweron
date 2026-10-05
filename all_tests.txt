@@ -1,0 +1,349 @@
+  basics:
+      1. ✗ Simple target clause w/ comment
+      2. ✓ Case sensitivity test
+      3. ✓ Test define block
+      4. ✗ Complex select block
+      5. ✓ Basic structure
+      6. ✗ If statement with do block
+      7. ✓ Common expressions
+      8. ✓ For block testing
+      9. ✓ Variable identifier keyword conflicts
+     10. ✗ Function call
+     11. ✗ Functions vs arrays
+     12. ✗ Comments
+     13. ✗ For each comment error
+
+7 failures:
+
+correct / expected / unexpected
+  1. Simple target clause w/ comment:
+
+    (source_file
+      (ERROR
+        (UNEXPECTED '[')
+        (comment)
+        (UNEXPECTED ']')))))(target_clause
+  (target)
+  (record_name
+    (record
+      (share))
+    (subrecord
+      (hold))))
+      (comment
+        (comment_text))
+      (target_clause
+        (target)
+        (record_name
+          (record
+            (share))
+          (subrecord
+            (hold)))))
+
+
+  2. Complex select block:
+
+    (source_file
+      (select_block
+        (select)
+        (ERROR
+          (UNEXPECTED '[')
+          (identifier)
+          (UNEXPECTED ' '))
+        (comment
+          (comment_text))
+        (boolean_expression
+          (boolean_expression
+            (boolean_expression
+              (comparison
+                (expression
+                  (identifier))
+                (ERROR
+                  (UNEXPECTED '.'))))))))))(expression
+  (field_access
+    (record_name
+      (record
+        (share))
+      (subrecord
+        (hold)))
+    (identifier)))(ERROR
+  (UNEXPECTED '['))(col)(UNEXPECTED 'n')(access)(or)(UNEXPECTED 'b')(comparison_operator)(expression
+  (identifier))(and)(boolean_expression
+  (comparison
+    (expression
+      (field_access
+        (record_name
+          (record
+            (share))
+          (subrecord
+            (hold)))
+        (identifier)))
+    (comparison_operator)
+    (expression
+      (identifier))))(ERROR)(or)(boolean_expression
+  (boolean_expression
+    (boolean_expression
+      (comparison
+        (expression
+          (field_access
+            (record_name
+              (record
+                (share))
+              (subrecord
+                (hold)))
+            (identifier)))
+        (comparison_operator)
+        (expression
+          (identifier))))
+    (and)
+    (boolean_expression
+      (comparison
+        (expression
+          (field_access
+            (record_name
+              (record
+                (share))
+              (subrecord
+                (hold)))
+            (identifier)))
+        (comparison_operator)
+        (expression
+          (identifier))))))(end)
+              (boolean_expression
+                (comparison
+                  (expression
+                    (field_access
+                      (record_name
+                        (record
+                          (share))
+                        (subrecord
+                          (hold)))
+                      (identifier)))
+                  (comment
+                    (comment_text))
+                  (comparison_operator)
+                  (expression
+                    (identifier))))
+              (and)
+              (boolean_expression
+                (comparison
+                  (expression
+                    (field_access
+                      (record_name
+                        (record
+                          (share))
+                        (subrecord
+                          (hold)))
+                      (identifier)))
+                  (comparison_operator)
+                  (expression
+                    (identifier))))))
+          (or)
+          (boolean_expression
+            (boolean_expression
+              (boolean_expression
+                (comparison
+                  (expression
+                    (field_access
+                      (record_name
+                        (record
+                          (share))
+                        (subrecord
+                          (hold)))
+                      (identifier)))
+                  (comparison_operator)
+                  (expression
+                    (identifier))))
+              (and)
+              (boolean_expression
+                (comparison
+                  (expression
+                    (field_access
+                      (record_name
+                        (record
+                          (share))
+                        (subrecord
+                          (hold)))
+                      (identifier)))
+                  (comparison_operator)
+                  (expression
+                    (identifier)))))))
+        (end)))
+
+
+  3. If statement with do block:
+
+    (source_file
+      (setup_block
+        (setup)
+        (statement
+          (if_statement
+            (if)
+            (boolean_expression
+              (comparison
+                (expression
+                  (identifier))
+                (comparison_operator)
+                (expression
+                  (number))))
+            (then)
+            (statement
+              (do_block
+                (do)
+                (statement
+                  (assignment_statement
+                    (identifier)
+                    (expression
+                      (character))))
+                (end)))))
+        (end))
+      (ERROR
+        (UNEXPECTED '['))
+      (comment
+        (comment_text))
+      (select_block
+        (select)
+        (boolean_expression
+          (comparison
+            (expression
+              (field_access
+                (record_name
+                  (record
+                    (share))
+                  (subrecord
+                    (hold)))
+                (identifier)))
+            (comparison_operator)
+            (expression
+              (identifier))))
+        (end)))
+
+
+  4. Function call:
+
+    (source_file
+      (setup_block
+        (setup)
+        (ERROR
+          (UNEXPECTED '['))
+        (comment
+          (comment_text))
+        (statement
+          (function_call
+            (function_name
+              (chrvalue))
+            (expression
+              (identifier))))
+        (statement
+          (function_call
+            (function_name
+              (fileread))
+            (expression
+              (identifier))
+            (expression
+              (identifier))
+            (expression
+              (identifier))
+            (expression
+              (identifier))))
+        (end)))
+
+
+  5. Functions vs arrays:
+
+    (source_file
+      (procedure_block
+        (procedure)
+        (identifier)
+        (ERROR
+          (UNEXPECTED '[')
+          (access)
+          (UNEXPECTED ']'))))))(character)(UNEXPECTED '[')(call)(UNEXPECTED ']')(statement
+  (function_call
+    (function_name
+      (fileread))
+    (expression
+      (identifier))
+    (expression
+      (identifier))
+    (expression
+      (identifier))
+    (expression
+      (identifier))))(end)
+        (comment
+          (comment_text))
+        (statement
+          (assignment_statement
+            (array_access
+              (identifier)
+              (expression
+                (number)))
+            (expression
+              (character))))
+        (comment
+          (comment_text))
+        (statement
+          (function_call
+            (function_name
+              (fileread))
+            (expression
+              (identifier))
+            (expression
+              (identifier))
+            (expression
+              (identifier))
+            (expression
+              (identifier))))
+        (end)))
+
+
+  6. Comments:
+
+    (source_file
+      (comment)
+      (ERROR
+        (UNEXPECTED '[')
+        (comment)
+        (UNEXPECTED ']')))))(comment)(UNEXPECTED '[')(comment)(UNEXPECTED '\n')
+      (comment
+        (comment_text)
+        (comment
+          (comment_text)))
+      (comment
+        (comment_text)
+        (comment
+          (comment_text))
+        (comment_text))
+      (comment
+        (comment_text))
+      (comment
+        (comment_text)
+        (comment
+          (comment_text))
+        (comment_text)))
+
+
+  7. For each comment error:
+
+    (source_file
+      (setup_block
+        (setup)
+        (statement
+          (for_block
+            (for_each
+              (for)
+              (each)
+              (record_name
+                (record
+                  (share))))
+            (ERROR
+              (UNEXPECTED '['))
+            (statement
+              (do_block
+                (do)
+                (statement
+                  (suppressnewline))
+                (ERROR
+                  (UNEXPECTED '['))))))))))(end)(end)
+)
+
+Total parses: 13; successful parses: 6; failed parses: 7; success percentage: 46.15%; average speed: 578 bytes/ms

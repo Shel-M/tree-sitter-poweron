@@ -1,0 +1,7555 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "poweron",
+  "rules": {
+    "source_file": {
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "target_clause"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "define_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "setup_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "select_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "sort_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "letter_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "print_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "procedure_block"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "include_statement"
+          }
+        ]
+      }
+    },
+    "record": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "account"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "achaddenda"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "achaddinfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "achedit"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "achitem"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "activity"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "agreement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "atmdialog"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "batchachorig"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "card"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cashletter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cashorder"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cdmdialog"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "check"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "collateral"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "corptransfer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cpworkcard"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "credrep"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ctr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ctraccount"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ctrbranch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ctrforeign"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ctrperson"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dealer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "eft"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "excpaddenda"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "excpaddinfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "excpitem"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "externalaccount"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "externalloan"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "glaccount"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "glentry"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "glsubaccount"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "gltran"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "household"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "inventory"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "invoice"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "irs"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "loanapp"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "lookup"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "mbraddress"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "memberrec"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "nonacctname"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "participant"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "participation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "participationloan"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "payee"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "portfolio"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "preference"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "receiveditem"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "remittance"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "reserveplan"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "share"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "site"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "user"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "vendor"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "westernunion"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "wire"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "worklistedit"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comment"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fmhistory"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "glhistory"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "loan"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "note"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tracking"
+        }
+      ]
+    },
+    "account": {
+      "type": "PATTERN",
+      "value": "account",
+      "flags": "i"
+    },
+    "achaddenda": {
+      "type": "PATTERN",
+      "value": "achaddenda",
+      "flags": "i"
+    },
+    "achaddinfo": {
+      "type": "PATTERN",
+      "value": "achaddinfo",
+      "flags": "i"
+    },
+    "achedit": {
+      "type": "PATTERN",
+      "value": "achedit",
+      "flags": "i"
+    },
+    "achitem": {
+      "type": "PATTERN",
+      "value": "achitem",
+      "flags": "i"
+    },
+    "activity": {
+      "type": "PATTERN",
+      "value": "activity",
+      "flags": "i"
+    },
+    "agreement": {
+      "type": "PATTERN",
+      "value": "agreement",
+      "flags": "i"
+    },
+    "atmdialog": {
+      "type": "PATTERN",
+      "value": "atmdialog",
+      "flags": "i"
+    },
+    "batchachorig": {
+      "type": "PATTERN",
+      "value": "batchachorig",
+      "flags": "i"
+    },
+    "card": {
+      "type": "PATTERN",
+      "value": "card",
+      "flags": "i"
+    },
+    "cashletter": {
+      "type": "PATTERN",
+      "value": "cashletter",
+      "flags": "i"
+    },
+    "cashorder": {
+      "type": "PATTERN",
+      "value": "cashorder",
+      "flags": "i"
+    },
+    "cdmdialog": {
+      "type": "PATTERN",
+      "value": "cdmdialog",
+      "flags": "i"
+    },
+    "check": {
+      "type": "PATTERN",
+      "value": "check",
+      "flags": "i"
+    },
+    "collateral": {
+      "type": "PATTERN",
+      "value": "collateral",
+      "flags": "i"
+    },
+    "corptransfer": {
+      "type": "PATTERN",
+      "value": "corptransfer",
+      "flags": "i"
+    },
+    "cpworkcard": {
+      "type": "PATTERN",
+      "value": "cpworkcard",
+      "flags": "i"
+    },
+    "credrep": {
+      "type": "PATTERN",
+      "value": "credrep",
+      "flags": "i"
+    },
+    "ctr": {
+      "type": "PATTERN",
+      "value": "ctr",
+      "flags": "i"
+    },
+    "ctraccount": {
+      "type": "PATTERN",
+      "value": "ctraccount",
+      "flags": "i"
+    },
+    "ctrbranch": {
+      "type": "PATTERN",
+      "value": "ctrbranch",
+      "flags": "i"
+    },
+    "ctrforeign": {
+      "type": "PATTERN",
+      "value": "ctrforeign",
+      "flags": "i"
+    },
+    "ctrperson": {
+      "type": "PATTERN",
+      "value": "ctrperson",
+      "flags": "i"
+    },
+    "dealer": {
+      "type": "PATTERN",
+      "value": "dealer",
+      "flags": "i"
+    },
+    "eft": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "eft",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "bill",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "payroll",
+          "flags": "i"
+        }
+      ]
+    },
+    "excpaddenda": {
+      "type": "PATTERN",
+      "value": "excpaddenda",
+      "flags": "i"
+    },
+    "excpaddinfo": {
+      "type": "PATTERN",
+      "value": "excpaddinfo",
+      "flags": "i"
+    },
+    "excpitem": {
+      "type": "PATTERN",
+      "value": "excpitem",
+      "flags": "i"
+    },
+    "externalaccount": {
+      "type": "PATTERN",
+      "value": "externalaccount",
+      "flags": "i"
+    },
+    "externalloan": {
+      "type": "PATTERN",
+      "value": "externalloan",
+      "flags": "i"
+    },
+    "glaccount": {
+      "type": "PATTERN",
+      "value": "glaccount",
+      "flags": "i"
+    },
+    "glentry": {
+      "type": "PATTERN",
+      "value": "glentry",
+      "flags": "i"
+    },
+    "glsubaccount": {
+      "type": "PATTERN",
+      "value": "glsubaccount",
+      "flags": "i"
+    },
+    "gltran": {
+      "type": "PATTERN",
+      "value": "gltran",
+      "flags": "i"
+    },
+    "household": {
+      "type": "PATTERN",
+      "value": "household",
+      "flags": "i"
+    },
+    "inventory": {
+      "type": "PATTERN",
+      "value": "inventory",
+      "flags": "i"
+    },
+    "invoice": {
+      "type": "PATTERN",
+      "value": "invoice",
+      "flags": "i"
+    },
+    "irs": {
+      "type": "PATTERN",
+      "value": "irs",
+      "flags": "i"
+    },
+    "loanapp": {
+      "type": "PATTERN",
+      "value": "loanapp",
+      "flags": "i"
+    },
+    "lookup": {
+      "type": "PATTERN",
+      "value": "lookup",
+      "flags": "i"
+    },
+    "mbraddress": {
+      "type": "PATTERN",
+      "value": "mbraddress",
+      "flags": "i"
+    },
+    "memberrec": {
+      "type": "PATTERN",
+      "value": "memberrec",
+      "flags": "i"
+    },
+    "nonacctname": {
+      "type": "PATTERN",
+      "value": "nonacctname",
+      "flags": "i"
+    },
+    "participant": {
+      "type": "PATTERN",
+      "value": "participant",
+      "flags": "i"
+    },
+    "participation": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "participation",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "pool",
+          "flags": "i"
+        }
+      ]
+    },
+    "participationloan": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "participationloan",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "poolloan",
+          "flags": "i"
+        }
+      ]
+    },
+    "payee": {
+      "type": "PATTERN",
+      "value": "payee",
+      "flags": "i"
+    },
+    "portfolio": {
+      "type": "PATTERN",
+      "value": "portfolio",
+      "flags": "i"
+    },
+    "preference": {
+      "type": "PATTERN",
+      "value": "preference",
+      "flags": "i"
+    },
+    "receiveditem": {
+      "type": "PATTERN",
+      "value": "receiveditem",
+      "flags": "i"
+    },
+    "remittance": {
+      "type": "PATTERN",
+      "value": "remittance",
+      "flags": "i"
+    },
+    "reserveplan": {
+      "type": "PATTERN",
+      "value": "reserveplan",
+      "flags": "i"
+    },
+    "share": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "share",
+          "flags": "i"
+        },
+        {
+          "type": "PATTERN",
+          "value": "savings",
+          "flags": "i"
+        }
+      ]
+    },
+    "site": {
+      "type": "PATTERN",
+      "value": "site",
+      "flags": "i"
+    },
+    "user": {
+      "type": "PATTERN",
+      "value": "user",
+      "flags": "i"
+    },
+    "vendor": {
+      "type": "PATTERN",
+      "value": "vendor",
+      "flags": "i"
+    },
+    "westernunion": {
+      "type": "PATTERN",
+      "value": "westernunion",
+      "flags": "i"
+    },
+    "wire": {
+      "type": "PATTERN",
+      "value": "wire",
+      "flags": "i"
+    },
+    "worklistedit": {
+      "type": "PATTERN",
+      "value": "worklistedit",
+      "flags": "i"
+    },
+    "subrecord": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "access"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "addendainfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "analysis"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "analysisgroup"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "analysisplan"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bankruptcy"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "beneficiaryadv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "beneficiaryfiadv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "beneficiaryfiinfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "beneficiaryinfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cashordertype"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "checkorder"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "collhold"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comment"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ctrtraninfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "distribution"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "document"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "drawdowndebitacctadv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "escrow"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "escrowanalysis"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "finance"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fitofiinfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fmhistory"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "glhistory"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "hold"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "intermedfiadv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "imtermedfiinfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "item"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "lnsegment"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "loan"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "note"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ofacdetails"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "person"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "pledge"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "receiverfiinfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "servicemessage"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "schedule"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tracking"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "transaction"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "transfer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "uscauditinfo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "worklistfield"
+        }
+      ]
+    },
+    "access": {
+      "type": "PATTERN",
+      "value": "access",
+      "flags": "i"
+    },
+    "addendainfo": {
+      "type": "PATTERN",
+      "value": "addendainfo",
+      "flags": "i"
+    },
+    "analysis": {
+      "type": "PATTERN",
+      "value": "analysis",
+      "flags": "i"
+    },
+    "analysisgroup": {
+      "type": "PATTERN",
+      "value": "analysisgroup",
+      "flags": "i"
+    },
+    "analysisplan": {
+      "type": "PATTERN",
+      "value": "analysisplan",
+      "flags": "i"
+    },
+    "bankruptcy": {
+      "type": "PATTERN",
+      "value": "bankruptcy",
+      "flags": "i"
+    },
+    "beneficiaryadv": {
+      "type": "PATTERN",
+      "value": "beneficiaryadv",
+      "flags": "i"
+    },
+    "beneficiaryfiadv": {
+      "type": "PATTERN",
+      "value": "beneficiaryfiadv",
+      "flags": "i"
+    },
+    "beneficiaryfiinfo": {
+      "type": "PATTERN",
+      "value": "beneficiaryfiinfo",
+      "flags": "i"
+    },
+    "beneficiaryinfo": {
+      "type": "PATTERN",
+      "value": "beneficiaryinfo",
+      "flags": "i"
+    },
+    "cashordertype": {
+      "type": "PATTERN",
+      "value": "cashordertype",
+      "flags": "i"
+    },
+    "checkorder": {
+      "type": "PATTERN",
+      "value": "checkorder",
+      "flags": "i"
+    },
+    "collhold": {
+      "type": "PATTERN",
+      "value": "collhold",
+      "flags": "i"
+    },
+    "comment": {
+      "type": "PATTERN",
+      "value": "comment",
+      "flags": "i"
+    },
+    "ctrtraninfo": {
+      "type": "PATTERN",
+      "value": "ctrtraninfo",
+      "flags": "i"
+    },
+    "distribution": {
+      "type": "PATTERN",
+      "value": "distribution",
+      "flags": "i"
+    },
+    "document": {
+      "type": "PATTERN",
+      "value": "document",
+      "flags": "i"
+    },
+    "drawdowndebitacctadv": {
+      "type": "PATTERN",
+      "value": "drawdowndebitacctadv",
+      "flags": "i"
+    },
+    "escrow": {
+      "type": "PATTERN",
+      "value": "escrow",
+      "flags": "i"
+    },
+    "escrowanalysis": {
+      "type": "PATTERN",
+      "value": "escrowanalysis",
+      "flags": "i"
+    },
+    "finance": {
+      "type": "PATTERN",
+      "value": "finance",
+      "flags": "i"
+    },
+    "fitofiinfo": {
+      "type": "PATTERN",
+      "value": "fitofiinfo",
+      "flags": "i"
+    },
+    "fmhistory": {
+      "type": "PATTERN",
+      "value": "fmhistory",
+      "flags": "i"
+    },
+    "glhistory": {
+      "type": "PATTERN",
+      "value": "glhistory",
+      "flags": "i"
+    },
+    "hold": {
+      "type": "PATTERN",
+      "value": "hold",
+      "flags": "i"
+    },
+    "intermedfiadv": {
+      "type": "PATTERN",
+      "value": "intermedfiadv",
+      "flags": "i"
+    },
+    "imtermedfiinfo": {
+      "type": "PATTERN",
+      "value": "imtermedfiinfo",
+      "flags": "i"
+    },
+    "item": {
+      "type": "PATTERN",
+      "value": "item",
+      "flags": "i"
+    },
+    "lnsegment": {
+      "type": "PATTERN",
+      "value": "lnsegment",
+      "flags": "i"
+    },
+    "loan": {
+      "type": "PATTERN",
+      "value": "loan",
+      "flags": "i"
+    },
+    "name": {
+      "type": "PATTERN",
+      "value": "name",
+      "flags": "i"
+    },
+    "note": {
+      "type": "PATTERN",
+      "value": "note",
+      "flags": "i"
+    },
+    "ofacdetails": {
+      "type": "PATTERN",
+      "value": "ofacdetails",
+      "flags": "i"
+    },
+    "person": {
+      "type": "PATTERN",
+      "value": "person",
+      "flags": "i"
+    },
+    "pledge": {
+      "type": "PATTERN",
+      "value": "pledge",
+      "flags": "i"
+    },
+    "receiverfiinfo": {
+      "type": "PATTERN",
+      "value": "receiverfiinfo",
+      "flags": "i"
+    },
+    "servicemessage": {
+      "type": "PATTERN",
+      "value": "servicemessage",
+      "flags": "i"
+    },
+    "schedule": {
+      "type": "PATTERN",
+      "value": "schedule",
+      "flags": "i"
+    },
+    "tracking": {
+      "type": "PATTERN",
+      "value": "tracking",
+      "flags": "i"
+    },
+    "transaction": {
+      "type": "PATTERN",
+      "value": "transaction",
+      "flags": "i"
+    },
+    "transfer": {
+      "type": "PATTERN",
+      "value": "transfer",
+      "flags": "i"
+    },
+    "uscauditinfo": {
+      "type": "PATTERN",
+      "value": "uscauditinfo",
+      "flags": "i"
+    },
+    "worklistfield": {
+      "type": "PATTERN",
+      "value": "worklistfield",
+      "flags": "i"
+    },
+    "bottomrecord": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "prepetitionbal"
+        }
+      ]
+    },
+    "prepetitionbal": {
+      "type": "PATTERN",
+      "value": "prepetitionbal",
+      "flags": "i"
+    },
+    "anyservice": {
+      "type": "PATTERN",
+      "value": "anyservice",
+      "flags": "i"
+    },
+    "anywarning": {
+      "type": "PATTERN",
+      "value": "anywarning",
+      "flags": "i"
+    },
+    "execute": {
+      "type": "PATTERN",
+      "value": "execute",
+      "flags": "i"
+    },
+    "initsubroutine": {
+      "type": "PATTERN",
+      "value": "initsubroutine",
+      "flags": "i"
+    },
+    "initcreditreport": {
+      "type": "PATTERN",
+      "value": "initcreditreport",
+      "flags": "i"
+    },
+    "queuecreditreport": {
+      "type": "PATTERN",
+      "value": "queuecreditreport",
+      "flags": "i"
+    },
+    "screenxypos": {
+      "type": "PATTERN",
+      "value": "screenxypos",
+      "flags": "i"
+    },
+    "dateoffset": {
+      "type": "PATTERN",
+      "value": "dateoffset",
+      "flags": "i"
+    },
+    "day": {
+      "type": "PATTERN",
+      "value": "day",
+      "flags": "i"
+    },
+    "dayofweek": {
+      "type": "PATTERN",
+      "value": "dayofweek",
+      "flags": "i"
+    },
+    "fullyear": {
+      "type": "PATTERN",
+      "value": "fullyear",
+      "flags": "i"
+    },
+    "hour": {
+      "type": "PATTERN",
+      "value": "hour",
+      "flags": "i"
+    },
+    "minute": {
+      "type": "PATTERN",
+      "value": "minute",
+      "flags": "i"
+    },
+    "month": {
+      "type": "PATTERN",
+      "value": "month",
+      "flags": "i"
+    },
+    "year": {
+      "type": "PATTERN",
+      "value": "year",
+      "flags": "i"
+    },
+    "dialogpromptchar": {
+      "type": "PATTERN",
+      "value": "dialogpromptchar",
+      "flags": "i"
+    },
+    "dialogpromptcode": {
+      "type": "PATTERN",
+      "value": "dialogpromptcode",
+      "flags": "i"
+    },
+    "dialogpromptcombooption": {
+      "type": "PATTERN",
+      "value": "dialogpromptcombooption",
+      "flags": "i"
+    },
+    "dialogpromptcombostart": {
+      "type": "PATTERN",
+      "value": "dialogpromptcombostart",
+      "flags": "i"
+    },
+    "dialogpromptdate": {
+      "type": "PATTERN",
+      "value": "dialogpromptdate",
+      "flags": "i"
+    },
+    "dialogpromptlistoption": {
+      "type": "PATTERN",
+      "value": "dialogpromptlistoption",
+      "flags": "i"
+    },
+    "dialogpromptliststart": {
+      "type": "PATTERN",
+      "value": "dialogpromptliststart",
+      "flags": "i"
+    },
+    "dialogpromptmoney": {
+      "type": "PATTERN",
+      "value": "dialogpromptmoney",
+      "flags": "i"
+    },
+    "dialogpromptnumber": {
+      "type": "PATTERN",
+      "value": "dialogpromptnumber",
+      "flags": "i"
+    },
+    "dialogpromptpassword": {
+      "type": "PATTERN",
+      "value": "dialogpromptpassword",
+      "flags": "i"
+    },
+    "dialogpromptrate": {
+      "type": "PATTERN",
+      "value": "dialogpromptrate",
+      "flags": "i"
+    },
+    "dialogpromptyesno": {
+      "type": "PATTERN",
+      "value": "dialogpromptyesno",
+      "flags": "i"
+    },
+    "dialogstart": {
+      "type": "PATTERN",
+      "value": "dialogstart",
+      "flags": "i"
+    },
+    "dialogstartgroupbox": {
+      "type": "PATTERN",
+      "value": "dialogstartgroupbox",
+      "flags": "i"
+    },
+    "dialogtextlistoption": {
+      "type": "PATTERN",
+      "value": "dialogtextlistoption",
+      "flags": "i"
+    },
+    "dialogtextliststart": {
+      "type": "PATTERN",
+      "value": "dialogtextliststart",
+      "flags": "i"
+    },
+    "entercharacter": {
+      "type": "PATTERN",
+      "value": "entercharacter",
+      "flags": "i"
+    },
+    "entercode": {
+      "type": "PATTERN",
+      "value": "entercode",
+      "flags": "i"
+    },
+    "enterdate": {
+      "type": "PATTERN",
+      "value": "enterdate",
+      "flags": "i"
+    },
+    "enterline": {
+      "type": "PATTERN",
+      "value": "enterline",
+      "flags": "i"
+    },
+    "entermoney": {
+      "type": "PATTERN",
+      "value": "entermoney",
+      "flags": "i"
+    },
+    "enternumber": {
+      "type": "PATTERN",
+      "value": "enternumber",
+      "flags": "i"
+    },
+    "enterrate": {
+      "type": "PATTERN",
+      "value": "enterrate",
+      "flags": "i"
+    },
+    "enteryesno": {
+      "type": "PATTERN",
+      "value": "enteryesno",
+      "flags": "i"
+    },
+    "popupmessage": {
+      "type": "PATTERN",
+      "value": "popupmessage",
+      "flags": "i"
+    },
+    "winddeconnect": {
+      "type": "PATTERN",
+      "value": "winddeconnect",
+      "flags": "i"
+    },
+    "winddedisconnect": {
+      "type": "PATTERN",
+      "value": "winddedisconnect",
+      "flags": "i"
+    },
+    "winddeexecute": {
+      "type": "PATTERN",
+      "value": "winddeexecute",
+      "flags": "i"
+    },
+    "winddepokedata": {
+      "type": "PATTERN",
+      "value": "winddepokedata",
+      "flags": "i"
+    },
+    "windowssend": {
+      "type": "PATTERN",
+      "value": "windowssend",
+      "flags": "i"
+    },
+    "winmessagefield": {
+      "type": "PATTERN",
+      "value": "winmessagefield",
+      "flags": "i"
+    },
+    "winmessagesend": {
+      "type": "PATTERN",
+      "value": "winmessagesend",
+      "flags": "i"
+    },
+    "winmodetext": {
+      "type": "PATTERN",
+      "value": "winmodetext",
+      "flags": "i"
+    },
+    "winmodewindows": {
+      "type": "PATTERN",
+      "value": "winmodewindows",
+      "flags": "i"
+    },
+    "winmessagestart": {
+      "type": "PATTERN",
+      "value": "winmessagestart",
+      "flags": "i"
+    },
+    "yesnoprompt": {
+      "type": "PATTERN",
+      "value": "yesnoprompt",
+      "flags": "i"
+    },
+    "divprojectinit": {
+      "type": "PATTERN",
+      "value": "divprojectinit",
+      "flags": "i"
+    },
+    "emailline": {
+      "type": "PATTERN",
+      "value": "emailline",
+      "flags": "i"
+    },
+    "emailsend": {
+      "type": "PATTERN",
+      "value": "emailsend",
+      "flags": "i"
+    },
+    "emailstart": {
+      "type": "PATTERN",
+      "value": "emailstart",
+      "flags": "i"
+    },
+    "copyapp": {
+      "type": "PATTERN",
+      "value": "copyapp",
+      "flags": "i"
+    },
+    "createfinancefromcredrep": {
+      "type": "PATTERN",
+      "value": "createfinancefromcredrep",
+      "flags": "i"
+    },
+    "filearchiveadd": {
+      "type": "PATTERN",
+      "value": "filearchiveadd",
+      "flags": "i"
+    },
+    "filearchiveextract": {
+      "type": "PATTERN",
+      "value": "filearchiveextract",
+      "flags": "i"
+    },
+    "fileclose": {
+      "type": "PATTERN",
+      "value": "fileclose",
+      "flags": "i"
+    },
+    "filecreate": {
+      "type": "PATTERN",
+      "value": "filecreate",
+      "flags": "i"
+    },
+    "filedecrypt": {
+      "type": "PATTERN",
+      "value": "filedecrypt",
+      "flags": "i"
+    },
+    "filedelete": {
+      "type": "PATTERN",
+      "value": "filedelete",
+      "flags": "i"
+    },
+    "fileencrypt": {
+      "type": "PATTERN",
+      "value": "fileencrypt",
+      "flags": "i"
+    },
+    "filegetpos": {
+      "type": "PATTERN",
+      "value": "filegetpos",
+      "flags": "i"
+    },
+    "filelistclose": {
+      "type": "PATTERN",
+      "value": "filelistclose",
+      "flags": "i"
+    },
+    "filelistopen": {
+      "type": "PATTERN",
+      "value": "filelistopen",
+      "flags": "i"
+    },
+    "filelistread": {
+      "type": "PATTERN",
+      "value": "filelistread",
+      "flags": "i"
+    },
+    "fileopen": {
+      "type": "PATTERN",
+      "value": "fileopen",
+      "flags": "i"
+    },
+    "fileread": {
+      "type": "PATTERN",
+      "value": "fileread",
+      "flags": "i"
+    },
+    "filereadline": {
+      "type": "PATTERN",
+      "value": "filereadline",
+      "flags": "i"
+    },
+    "filesetpos": {
+      "type": "PATTERN",
+      "value": "filesetpos",
+      "flags": "i"
+    },
+    "filewriteline": {
+      "type": "PATTERN",
+      "value": "filewriteline",
+      "flags": "i"
+    },
+    "ftpclose": {
+      "type": "PATTERN",
+      "value": "ftpclose",
+      "flags": "i"
+    },
+    "ftpcmd": {
+      "type": "PATTERN",
+      "value": "ftpcmd",
+      "flags": "i"
+    },
+    "ftpget": {
+      "type": "PATTERN",
+      "value": "ftpget",
+      "flags": "i"
+    },
+    "ftplogin": {
+      "type": "PATTERN",
+      "value": "ftplogin",
+      "flags": "i"
+    },
+    "ftpopen": {
+      "type": "PATTERN",
+      "value": "ftpopen",
+      "flags": "i"
+    },
+    "ftpput": {
+      "type": "PATTERN",
+      "value": "ftpput",
+      "flags": "i"
+    },
+    "getdatachar": {
+      "type": "PATTERN",
+      "value": "getdatachar",
+      "flags": "i"
+    },
+    "getdatadate": {
+      "type": "PATTERN",
+      "value": "getdatadate",
+      "flags": "i"
+    },
+    "getdatamoney": {
+      "type": "PATTERN",
+      "value": "getdatamoney",
+      "flags": "i"
+    },
+    "getdatanumber": {
+      "type": "PATTERN",
+      "value": "getdatanumber",
+      "flags": "i"
+    },
+    "getdatarate": {
+      "type": "PATTERN",
+      "value": "getdatarate",
+      "flags": "i"
+    },
+    "getfielddatamax": {
+      "type": "PATTERN",
+      "value": "getfielddatamax",
+      "flags": "i"
+    },
+    "getfieldatatype": {
+      "type": "PATTERN",
+      "value": "getfieldatatype",
+      "flags": "i"
+    },
+    "getfieldhelpfile": {
+      "type": "PATTERN",
+      "value": "getfieldhelpfile",
+      "flags": "i"
+    },
+    "getfieldmnemonic": {
+      "type": "PATTERN",
+      "value": "getfieldmnemonic",
+      "flags": "i"
+    },
+    "getfieldname": {
+      "type": "PATTERN",
+      "value": "getfieldname",
+      "flags": "i"
+    },
+    "getfieldnumber": {
+      "type": "PATTERN",
+      "value": "getfieldnumber",
+      "flags": "i"
+    },
+    "htmlviewline": {
+      "type": "PATTERN",
+      "value": "htmlviewline",
+      "flags": "i"
+    },
+    "characterread": {
+      "type": "PATTERN",
+      "value": "characterread",
+      "flags": "i"
+    },
+    "coderead": {
+      "type": "PATTERN",
+      "value": "coderead",
+      "flags": "i"
+    },
+    "dateread": {
+      "type": "PATTERN",
+      "value": "dateread",
+      "flags": "i"
+    },
+    "moneyread": {
+      "type": "PATTERN",
+      "value": "moneyread",
+      "flags": "i"
+    },
+    "numberread": {
+      "type": "PATTERN",
+      "value": "numberread",
+      "flags": "i"
+    },
+    "rateread": {
+      "type": "PATTERN",
+      "value": "rateread",
+      "flags": "i"
+    },
+    "yesnoread": {
+      "type": "PATTERN",
+      "value": "yesnoread",
+      "flags": "i"
+    },
+    "hpboxdraw": {
+      "type": "PATTERN",
+      "value": "hpboxdraw",
+      "flags": "i"
+    },
+    "hpesc": {
+      "type": "PATTERN",
+      "value": "hpesc",
+      "flags": "i"
+    },
+    "hpfont": {
+      "type": "PATTERN",
+      "value": "hpfont",
+      "flags": "i"
+    },
+    "hplinedraw": {
+      "type": "PATTERN",
+      "value": "hplinedraw",
+      "flags": "i"
+    },
+    "hplinesperinch": {
+      "type": "PATTERN",
+      "value": "hplinesperinch",
+      "flags": "i"
+    },
+    "hpreset": {
+      "type": "PATTERN",
+      "value": "hpreset",
+      "flags": "i"
+    },
+    "hpsetup": {
+      "type": "PATTERN",
+      "value": "hpsetup",
+      "flags": "i"
+    },
+    "hpunderline": {
+      "type": "PATTERN",
+      "value": "hpunderline",
+      "flags": "i"
+    },
+    "hpxpos": {
+      "type": "PATTERN",
+      "value": "hpxpos",
+      "flags": "i"
+    },
+    "hpypos": {
+      "type": "PATTERN",
+      "value": "hpypos",
+      "flags": "i"
+    },
+    "loanprojectinit": {
+      "type": "PATTERN",
+      "value": "loanprojectinit",
+      "flags": "i"
+    },
+    "abs": {
+      "type": "PATTERN",
+      "value": "abs",
+      "flags": "i"
+    },
+    "exp": {
+      "type": "PATTERN",
+      "value": "exp",
+      "flags": "i"
+    },
+    "floor": {
+      "type": "PATTERN",
+      "value": "floor",
+      "flags": "i"
+    },
+    "log": {
+      "type": "PATTERN",
+      "value": "log",
+      "flags": "i"
+    },
+    "mod": {
+      "type": "PATTERN",
+      "value": "mod",
+      "flags": "i"
+    },
+    "pwr": {
+      "type": "PATTERN",
+      "value": "pwr",
+      "flags": "i"
+    },
+    "outputclose": {
+      "type": "PATTERN",
+      "value": "outputclose",
+      "flags": "i"
+    },
+    "outputopen": {
+      "type": "PATTERN",
+      "value": "outputopen",
+      "flags": "i"
+    },
+    "outputswitch": {
+      "type": "PATTERN",
+      "value": "outputswitch",
+      "flags": "i"
+    },
+    "capitalize": {
+      "type": "PATTERN",
+      "value": "capitalize",
+      "flags": "i"
+    },
+    "charactersearch": {
+      "type": "PATTERN",
+      "value": "charactersearch",
+      "flags": "i"
+    },
+    "length": {
+      "type": "PATTERN",
+      "value": "length",
+      "flags": "i"
+    },
+    "lowercase": {
+      "type": "PATTERN",
+      "value": "lowercase",
+      "flags": "i"
+    },
+    "md5hash": {
+      "type": "PATTERN",
+      "value": "md5hash",
+      "flags": "i"
+    },
+    "passwordhash": {
+      "type": "PATTERN",
+      "value": "passwordhash",
+      "flags": "i"
+    },
+    "repeatchr": {
+      "type": "PATTERN",
+      "value": "repeatchr",
+      "flags": "i"
+    },
+    "uppercase": {
+      "type": "PATTERN",
+      "value": "uppercase",
+      "flags": "i"
+    },
+    "sysusername": {
+      "type": "PATTERN",
+      "value": "sysusername",
+      "flags": "i"
+    },
+    "chrvalue": {
+      "type": "PATTERN",
+      "value": "chrvalue",
+      "flags": "i"
+    },
+    "ctrlchr": {
+      "type": "PATTERN",
+      "value": "ctrlchr",
+      "flags": "i"
+    },
+    "date_conv": {
+      "type": "PATTERN",
+      "value": "date",
+      "flags": "i"
+    },
+    "datevalue": {
+      "type": "PATTERN",
+      "value": "datevalue",
+      "flags": "i"
+    },
+    "format": {
+      "type": "PATTERN",
+      "value": "format",
+      "flags": "i"
+    },
+    "float_conv": {
+      "type": "PATTERN",
+      "value": "float",
+      "flags": "i"
+    },
+    "floatvalue": {
+      "type": "PATTERN",
+      "value": "floatvalue",
+      "flags": "i"
+    },
+    "int": {
+      "type": "PATTERN",
+      "value": "int",
+      "flags": "i"
+    },
+    "money_conv": {
+      "type": "PATTERN",
+      "value": "money",
+      "flags": "i"
+    },
+    "number_conv": {
+      "type": "PATTERN",
+      "value": "number",
+      "flags": "i"
+    },
+    "rate_conv": {
+      "type": "PATTERN",
+      "value": "rate",
+      "flags": "i"
+    },
+    "value": {
+      "type": "PATTERN",
+      "value": "value",
+      "flags": "i"
+    },
+    "all": {
+      "type": "PATTERN",
+      "value": "all",
+      "flags": "i"
+    },
+    "and": {
+      "type": "PATTERN",
+      "value": "and",
+      "flags": "i"
+    },
+    "any": {
+      "type": "PATTERN",
+      "value": "any",
+      "flags": "i"
+    },
+    "by": {
+      "type": "PATTERN",
+      "value": "by",
+      "flags": "i"
+    },
+    "not": {
+      "type": "PATTERN",
+      "value": "not",
+      "flags": "i"
+    },
+    "or": {
+      "type": "PATTERN",
+      "value": "or",
+      "flags": "i"
+    },
+    "call": {
+      "type": "PATTERN",
+      "value": "call",
+      "flags": "i"
+    },
+    "define": {
+      "type": "PATTERN",
+      "value": "define",
+      "flags": "i"
+    },
+    "do": {
+      "type": "PATTERN",
+      "value": "do",
+      "flags": "i"
+    },
+    "each": {
+      "type": "PATTERN",
+      "value": "each",
+      "flags": "i"
+    },
+    "else": {
+      "type": "PATTERN",
+      "value": "else",
+      "flags": "i"
+    },
+    "end": {
+      "type": "PATTERN",
+      "value": "end",
+      "flags": "i"
+    },
+    "every": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "every"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "starting"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "with"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "number"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "for": {
+      "type": "PATTERN",
+      "value": "for",
+      "flags": "i"
+    },
+    "if": {
+      "type": "PATTERN",
+      "value": "if",
+      "flags": "i"
+    },
+    "include": {
+      "type": "PATTERN",
+      "value": "#include",
+      "flags": "i"
+    },
+    "none": {
+      "type": "PATTERN",
+      "value": "none",
+      "flags": "i"
+    },
+    "procedure": {
+      "type": "PATTERN",
+      "value": "procedure",
+      "flags": "i"
+    },
+    "select": {
+      "type": "PATTERN",
+      "value": "select",
+      "flags": "i"
+    },
+    "setup": {
+      "type": "PATTERN",
+      "value": "setup",
+      "flags": "i"
+    },
+    "sort": {
+      "type": "PATTERN",
+      "value": "sort",
+      "flags": "i"
+    },
+    "target": {
+      "type": "PATTERN",
+      "value": "target",
+      "flags": "i"
+    },
+    "terminate": {
+      "type": "PATTERN",
+      "value": "terminate",
+      "flags": "i"
+    },
+    "then": {
+      "type": "PATTERN",
+      "value": "then",
+      "flags": "i"
+    },
+    "to": {
+      "type": "PATTERN",
+      "value": "to",
+      "flags": "i"
+    },
+    "until": {
+      "type": "PATTERN",
+      "value": "until",
+      "flags": "i"
+    },
+    "while": {
+      "type": "PATTERN",
+      "value": "while",
+      "flags": "i"
+    },
+    "with": {
+      "type": "PATTERN",
+      "value": "with",
+      "flags": "i"
+    },
+    "pullcreditreport": {
+      "type": "PATTERN",
+      "value": "pullcreditreport",
+      "flags": "i"
+    },
+    "bell": {
+      "type": "PATTERN",
+      "value": "bell",
+      "flags": "i"
+    },
+    "blink": {
+      "type": "PATTERN",
+      "value": "blink",
+      "flags": "i"
+    },
+    "bright": {
+      "type": "PATTERN",
+      "value": "bright",
+      "flags": "i"
+    },
+    "dim": {
+      "type": "PATTERN",
+      "value": "dim",
+      "flags": "i"
+    },
+    "stopblink": {
+      "type": "PATTERN",
+      "value": "stopblink",
+      "flags": "i"
+    },
+    "enterdelimiter": {
+      "type": "PATTERN",
+      "value": "enterdelimiter",
+      "flags": "i"
+    },
+    "dialogclose": {
+      "type": "PATTERN",
+      "value": "dialogclose",
+      "flags": "i"
+    },
+    "dialogdisplay": {
+      "type": "PATTERN",
+      "value": "dialogdisplay",
+      "flags": "i"
+    },
+    "dialogendgroupbox": {
+      "type": "PATTERN",
+      "value": "dialogendgroupbox",
+      "flags": "i"
+    },
+    "dialogendgrouping": {
+      "type": "PATTERN",
+      "value": "dialogendgrouping",
+      "flags": "i"
+    },
+    "dialogintrotext": {
+      "type": "PATTERN",
+      "value": "dialogintrotext",
+      "flags": "i"
+    },
+    "dialognewcolumn": {
+      "type": "PATTERN",
+      "value": "dialognewcolumn",
+      "flags": "i"
+    },
+    "dialogpromptcomboend": {
+      "type": "PATTERN",
+      "value": "dialogpromptcomboend",
+      "flags": "i"
+    },
+    "dialogpromptlistend": {
+      "type": "PATTERN",
+      "value": "dialogpromptlistend",
+      "flags": "i"
+    },
+    "dialogstartgrouping": {
+      "type": "PATTERN",
+      "value": "dialogstartgrouping",
+      "flags": "i"
+    },
+    "dialogtextlistend": {
+      "type": "PATTERN",
+      "value": "dialogtextlistend",
+      "flags": "i"
+    },
+    "divprojectcalc": {
+      "type": "PATTERN",
+      "value": "divprojectcalc",
+      "flags": "i"
+    },
+    "afterlast": {
+      "type": "PATTERN",
+      "value": "afterlast",
+      "flags": "i"
+    },
+    "beforefirst": {
+      "type": "PATTERN",
+      "value": "beforefirst",
+      "flags": "i"
+    },
+    "change": {
+      "type": "PATTERN",
+      "value": "change",
+      "flags": "i"
+    },
+    "clearwarning": {
+      "type": "PATTERN",
+      "value": "clearwarning",
+      "flags": "i"
+    },
+    "create": {
+      "type": "PATTERN",
+      "value": "create",
+      "flags": "i"
+    },
+    "delete": {
+      "type": "PATTERN",
+      "value": "delete",
+      "flags": "i"
+    },
+    "fmperform": {
+      "type": "PATTERN",
+      "value": "fmperform",
+      "flags": "i"
+    },
+    "from": {
+      "type": "PATTERN",
+      "value": "from",
+      "flags": "i"
+    },
+    "insert": {
+      "type": "PATTERN",
+      "value": "insert",
+      "flags": "i"
+    },
+    "into": {
+      "type": "PATTERN",
+      "value": "into",
+      "flags": "i"
+    },
+    "loc": {
+      "type": "PATTERN",
+      "value": "loc",
+      "flags": "i"
+    },
+    "queue": {
+      "type": "PATTERN",
+      "value": "queue",
+      "flags": "i"
+    },
+    "remove": {
+      "type": "PATTERN",
+      "value": "remove",
+      "flags": "i"
+    },
+    "revise": {
+      "type": "PATTERN",
+      "value": "revise",
+      "flags": "i"
+    },
+    "set": {
+      "type": "PATTERN",
+      "value": "set",
+      "flags": "i"
+    },
+    "setwarning": {
+      "type": "PATTERN",
+      "value": "setwarning",
+      "flags": "i"
+    },
+    "slid": {
+      "type": "PATTERN",
+      "value": "slid",
+      "flags": "i"
+    },
+    "targetfile": {
+      "type": "PATTERN",
+      "value": "targetfile",
+      "flags": "i"
+    },
+    "uniquekey": {
+      "type": "PATTERN",
+      "value": "uniquekey",
+      "flags": "i"
+    },
+    "htmlviewdisplay": {
+      "type": "PATTERN",
+      "value": "htmlviewdisplay",
+      "flags": "i"
+    },
+    "htmlviewopen": {
+      "type": "PATTERN",
+      "value": "htmlviewopen",
+      "flags": "i"
+    },
+    "loanprojectcalc": {
+      "type": "PATTERN",
+      "value": "loanprojectcalc",
+      "flags": "i"
+    },
+    "accountchange": {
+      "type": "PATTERN",
+      "value": "accountchange",
+      "flags": "i"
+    },
+    "acs": {
+      "type": "PATTERN",
+      "value": "acs",
+      "flags": "i"
+    },
+    "audio": {
+      "type": "PATTERN",
+      "value": "audio",
+      "flags": "i"
+    },
+    "batch": {
+      "type": "PATTERN",
+      "value": "batch",
+      "flags": "i"
+    },
+    "cardcreationwizard": {
+      "type": "PATTERN",
+      "value": "cardcreationwizard",
+      "flags": "i"
+    },
+    "certificate": {
+      "type": "PATTERN",
+      "value": "certificate",
+      "flags": "i"
+    },
+    "checkdisbursedwizard": {
+      "type": "PATTERN",
+      "value": "checkdisbursedwizard",
+      "flags": "i"
+    },
+    "collection": {
+      "type": "PATTERN",
+      "value": "collection",
+      "flags": "i"
+    },
+    "customforms": {
+      "type": "PATTERN",
+      "value": "customforms",
+      "flags": "i"
+    },
+    "customformswindows": {
+      "type": "PATTERN",
+      "value": "customformswindows",
+      "flags": "i"
+    },
+    "demand": {
+      "type": "PATTERN",
+      "value": "demand",
+      "flags": "i"
+    },
+    "homebanking": {
+      "type": "PATTERN",
+      "value": "homebanking",
+      "flags": "i"
+    },
+    "mcw": {
+      "type": "PATTERN",
+      "value": "mcw",
+      "flags": "i"
+    },
+    "mcwinteractive": {
+      "type": "PATTERN",
+      "value": "mcwinteractive",
+      "flags": "i"
+    },
+    "stateless": {
+      "type": "PATTERN",
+      "value": "stateless",
+      "flags": "i"
+    },
+    "subroutine": {
+      "type": "PATTERN",
+      "value": "subroutine",
+      "flags": "i"
+    },
+    "symconnect": {
+      "type": "PATTERN",
+      "value": "symconnect",
+      "flags": "i"
+    },
+    "validation": {
+      "type": "PATTERN",
+      "value": "validation",
+      "flags": "i"
+    },
+    "windows": {
+      "type": "PATTERN",
+      "value": "windows",
+      "flags": "i"
+    },
+    "windowsprint": {
+      "type": "PATTERN",
+      "value": "windowsprint",
+      "flags": "i"
+    },
+    "ascii": {
+      "type": "PATTERN",
+      "value": "ascii",
+      "flags": "i"
+    },
+    "col": {
+      "type": "PATTERN",
+      "value": "col",
+      "flags": "i"
+    },
+    "datafile": {
+      "type": "PATTERN",
+      "value": "datafile",
+      "flags": "i"
+    },
+    "ebcdic": {
+      "type": "PATTERN",
+      "value": "ebcdic",
+      "flags": "i"
+    },
+    "headers": {
+      "type": "PATTERN",
+      "value": "headers",
+      "flags": "i"
+    },
+    "labels": {
+      "type": "PATTERN",
+      "value": "labels",
+      "flags": "i"
+    },
+    "left": {
+      "type": "PATTERN",
+      "value": "left",
+      "flags": "i"
+    },
+    "letter": {
+      "type": "PATTERN",
+      "value": "letter",
+      "flags": "i"
+    },
+    "newline": {
+      "type": "PATTERN",
+      "value": "newline",
+      "flags": "i"
+    },
+    "newpage": {
+      "type": "PATTERN",
+      "value": "newpage",
+      "flags": "i"
+    },
+    "nonansistandard": {
+      "type": "PATTERN",
+      "value": "nonansistandard",
+      "flags": "i"
+    },
+    "print": {
+      "type": "PATTERN",
+      "value": "print",
+      "flags": "i"
+    },
+    "printcontrol": {
+      "type": "PATTERN",
+      "value": "printcontrol",
+      "flags": "i"
+    },
+    "right": {
+      "type": "PATTERN",
+      "value": "right",
+      "flags": "i"
+    },
+    "starting": {
+      "type": "PATTERN",
+      "value": "starting",
+      "flags": "i"
+    },
+    "suppress": {
+      "type": "PATTERN",
+      "value": "suppress",
+      "flags": "i"
+    },
+    "suppressnewline": {
+      "type": "PATTERN",
+      "value": "suppressnewline",
+      "flags": "i"
+    },
+    "trailers": {
+      "type": "PATTERN",
+      "value": "trailers",
+      "flags": "i"
+    },
+    "wrap": {
+      "type": "PATTERN",
+      "value": "wrap",
+      "flags": "i"
+    },
+    "overdrawavailablecalc": {
+      "type": "PATTERN",
+      "value": "overdrawavailablecalc",
+      "flags": "i"
+    },
+    "overdrawavailableinit": {
+      "type": "PATTERN",
+      "value": "overdrawavailableinit",
+      "flags": "i"
+    },
+    "liveinstcheck": {
+      "type": "PATTERN",
+      "value": "liveinstcheck",
+      "flags": "i"
+    },
+    "prevsystemdate": {
+      "type": "PATTERN",
+      "value": "prevsystemdate",
+      "flags": "i"
+    },
+    "sysactualdate": {
+      "type": "PATTERN",
+      "value": "sysactualdate",
+      "flags": "i"
+    },
+    "sysactualtime": {
+      "type": "PATTERN",
+      "value": "sysactualtime",
+      "flags": "i"
+    },
+    "sysclientnumber": {
+      "type": "PATTERN",
+      "value": "sysclientnumber",
+      "flags": "i"
+    },
+    "sysconsolenum": {
+      "type": "PATTERN",
+      "value": "sysconsolenum",
+      "flags": "i"
+    },
+    "syshostname": {
+      "type": "PATTERN",
+      "value": "syshostname",
+      "flags": "i"
+    },
+    "sysmemomode": {
+      "type": "PATTERN",
+      "value": "sysmemomode",
+      "flags": "i"
+    },
+    "syssymdirectory": {
+      "type": "PATTERN",
+      "value": "syssymdirectory",
+      "flags": "i"
+    },
+    "systemdate": {
+      "type": "PATTERN",
+      "value": "systemdate",
+      "flags": "i"
+    },
+    "sysusernumber": {
+      "type": "PATTERN",
+      "value": "sysusernumber",
+      "flags": "i"
+    },
+    "syswindowslevel": {
+      "type": "PATTERN",
+      "value": "syswindowslevel",
+      "flags": "i"
+    },
+    "tranperform": {
+      "type": "PATTERN",
+      "value": "tranperform",
+      "flags": "i"
+    },
+    "whilelimit": {
+      "type": "PATTERN",
+      "value": "whilelimit",
+      "flags": "i"
+    },
+    "across": {
+      "type": "PATTERN",
+      "value": "across",
+      "flags": "i"
+    },
+    "blocksize": {
+      "type": "PATTERN",
+      "value": "blocksize",
+      "flags": "i"
+    },
+    "datasize": {
+      "type": "PATTERN",
+      "value": "datasize",
+      "flags": "i"
+    },
+    "formlength": {
+      "type": "PATTERN",
+      "value": "formlength",
+      "flags": "i"
+    },
+    "header": {
+      "type": "PATTERN",
+      "value": "header",
+      "flags": "i"
+    },
+    "recordsize": {
+      "type": "PATTERN",
+      "value": "recordsize",
+      "flags": "i"
+    },
+    "reportcategory": {
+      "type": "PATTERN",
+      "value": "reportcategory",
+      "flags": "i"
+    },
+    "subtotal": {
+      "type": "PATTERN",
+      "value": "subtotal",
+      "flags": "i"
+    },
+    "title": {
+      "type": "PATTERN",
+      "value": "title",
+      "flags": "i"
+    },
+    "total": {
+      "type": "PATTERN",
+      "value": "total",
+      "flags": "i"
+    },
+    "width": {
+      "type": "PATTERN",
+      "value": "width",
+      "flags": "i"
+    },
+    "anyservice_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "anyservice"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "anywarning_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "anywarning"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "execute_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "execute"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "initsubroutine_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "initsubroutine"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "initcreditreport_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "initcreditreport"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "queuecreditreport_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "queuecreditreport"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "screenxypos_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "screenxypos"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dateoffset_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dateoffset"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "day_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "day"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dayofweek_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dayofweek"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "fullyear_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "fullyear"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hour_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hour"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "minute_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "minute"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "month_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "month"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "year_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "year"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptchar_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptchar"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptcode_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptcode"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptcombooption_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptcombooption"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptcombostart_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptcombostart"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptdate_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptdate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptlistoption_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptlistoption"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptliststart_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptliststart"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptmoney_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptmoney"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptnumber_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptnumber"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptpassword_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptpassword"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptrate_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptrate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogpromptyesno_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptyesno"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogstart_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogstart"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogstartgroupbox_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogstartgroupbox"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogtextlistoption_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogtextlistoption"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogtextliststart_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogtextliststart"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "entercharacter_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "entercharacter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "entercode_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "entercode"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "enterdate_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "enterdate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "enterline_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "enterline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "entermoney_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "entermoney"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "enternumber_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "enternumber"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "enterrate_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "enterrate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "enteryesno_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "enteryesno"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "popupmessage_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "popupmessage"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winddeconnect_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winddeconnect"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winddedisconnect_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winddedisconnect"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winddeexecute_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winddeexecute"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winddepokedata_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winddepokedata"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "windowssend_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "windowssend"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winmessagefield_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winmessagefield"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winmessagesend_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winmessagesend"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winmodetext_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winmodetext"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winmodewindows_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winmodewindows"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "winmessagestart_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "winmessagestart"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "yesnoprompt_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "yesnoprompt"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "divprojectinit_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "divprojectinit"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "emailline_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "emailline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "emailsend_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "emailsend"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "emailstart_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "emailstart"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "copyapp_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "copyapp"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "createfinancefromcredrep_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "createfinancefromcredrep"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filearchiveadd_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filearchiveadd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filearchiveextract_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filearchiveextract"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "fileclose_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "fileclose"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filecreate_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filecreate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filedecrypt_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filedecrypt"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filedelete_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filedelete"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "fileencrypt_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "fileencrypt"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filegetpos_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filegetpos"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filelistclose_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filelistclose"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filelistopen_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filelistopen"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filelistread_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filelistread"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "fileopen_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "fileopen"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "fileread_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "fileread"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filereadline_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filereadline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filesetpos_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filesetpos"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "filewriteline_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "filewriteline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "ftpclose_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ftpclose"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "ftpcmd_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ftpcmd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "ftpget_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ftpget"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "ftplogin_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ftplogin"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "ftpopen_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ftpopen"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "ftpput_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ftpput"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getdatachar_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getdatachar"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getdatadate_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getdatadate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getdatamoney_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getdatamoney"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getdatanumber_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getdatanumber"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getdatarate_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getdatarate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getfielddatamax_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getfielddatamax"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getfieldatatype_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getfieldatatype"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getfieldhelpfile_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getfieldhelpfile"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getfieldmnemonic_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getfieldmnemonic"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getfieldname_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getfieldname"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "getfieldnumber_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "getfieldnumber"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "htmlviewline_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "htmlviewline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "characterread_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "characterread"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "coderead_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "coderead"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dateread_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dateread"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "moneyread_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "moneyread"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "numberread_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "numberread"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "rateread_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "rateread"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "yesnoread_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "yesnoread"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hpboxdraw_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hpboxdraw"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hpesc_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hpesc"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hpfont_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hpfont"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hplinedraw_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hplinedraw"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hplinesperinch_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hplinesperinch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hpreset_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hpreset"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hpsetup_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hpsetup"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hpunderline_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hpunderline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hpxpos_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hpxpos"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "hpypos_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hpypos"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "loanprojectinit_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "loanprojectinit"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "abs_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "abs"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "exp_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "exp"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "floor_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "floor"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "log_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "log"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "mod_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "mod"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "pwr_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "pwr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "outputclose_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "outputclose"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "outputopen_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "outputopen"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "outputswitch_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "outputswitch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "capitalize_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "capitalize"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "charactersearch_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "charactersearch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "length_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "length"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "lowercase_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "lowercase"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "md5hash_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "md5hash"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "passwordhash_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "passwordhash"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "repeatchr_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "repeatchr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "uppercase_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "uppercase"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "sysusername_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "sysusername"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "chrvalue_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "chrvalue"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "ctrlchr_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "ctrlchr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "date_conv_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "date_conv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "datevalue_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "datevalue"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "format_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "format"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "float_conv_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "float_conv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "floatvalue_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "floatvalue"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "int_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "int"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "money_conv_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "money_conv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "number_conv_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "number_conv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "rate_conv_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "rate_conv"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "value_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "whilelimit_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "whilelimit"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "across_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "across"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "blocksize_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "blocksize"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "datasize_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "datasize"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "formlength_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "formlength"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "header_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "header"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "recordsize_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "recordsize"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "reportcategory_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "reportcategory"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "subtotal_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "subtotal"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "title_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "title"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "total_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "total"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "width_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "width"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "_builtin_statements": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "whilelimit_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "across_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "blocksize_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "datasize_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "formlength_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "header_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "recordsize_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "reportcategory_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "subtotal_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "title_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "total_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "width_statement"
+        }
+      ]
+    },
+    "function_call": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "function_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "function_name": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "anyservice"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "anywarning"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "execute"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "initsubroutine"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "initcreditreport"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "queuecreditreport"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "screenxypos"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dateoffset"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "day"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dayofweek"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "fullyear"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hour"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "minute"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "month"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "year"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptchar"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptcode"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptcombooption"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptcombostart"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptdate"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptlistoption"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptliststart"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptmoney"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptnumber"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptpassword"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptrate"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogpromptyesno"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogstart"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogstartgroupbox"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogtextlistoption"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogtextliststart"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "entercharacter"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "entercode"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "enterdate"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "enterline"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "entermoney"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "enternumber"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "enterrate"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "enteryesno"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "popupmessage"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winddeconnect"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winddedisconnect"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winddeexecute"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winddepokedata"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "windowssend"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winmessagefield"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winmessagesend"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winmodetext"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winmodewindows"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "winmessagestart"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "yesnoprompt"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "divprojectinit"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "emailline"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "emailsend"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "emailstart"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "copyapp"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "createfinancefromcredrep"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filearchiveadd"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filearchiveextract"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "fileclose"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filecreate"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filedecrypt"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filedelete"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "fileencrypt"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filegetpos"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filelistclose"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filelistopen"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filelistread"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "fileopen"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "fileread"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filereadline"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filesetpos"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "filewriteline"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "ftpclose"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "ftpcmd"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "ftpget"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "ftplogin"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "ftpopen"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "ftpput"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getdatachar"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getdatadate"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getdatamoney"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getdatanumber"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getdatarate"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getfielddatamax"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getfieldatatype"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getfieldhelpfile"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getfieldmnemonic"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getfieldname"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "getfieldnumber"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "htmlviewline"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "characterread"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "coderead"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dateread"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "moneyread"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "numberread"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "rateread"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "yesnoread"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hpboxdraw"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hpesc"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hpfont"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hplinedraw"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hplinesperinch"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hpreset"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hpsetup"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hpunderline"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hpxpos"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "hpypos"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "loanprojectinit"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "abs"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "exp"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "floor"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "log"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "mod"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "pwr"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "outputclose"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "outputopen"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "outputswitch"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "capitalize"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "charactersearch"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "length"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "lowercase"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "md5hash"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "passwordhash"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "repeatchr"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "uppercase"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "sysusername"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "chrvalue"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "ctrlchr"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "date_conv"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "datevalue"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "format"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "float_conv"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "floatvalue"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "int"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "money_conv"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "number_conv"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "rate_conv"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "value"
+          }
+        ]
+      }
+    },
+    "_function_args": {
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "("
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "expression"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "record_name"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "STRING",
+                          "value": ","
+                        },
+                        {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "expression"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "record_name"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "STRING",
+            "value": ")"
+          }
+        ]
+      }
+    },
+    "mode_keyword": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "accountchange"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "acs"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "atmdialog"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "audio"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "batch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "cardcreationwizard"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "certificate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "checkdisbursedwizard"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "collection"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "customforms"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "customformswindows"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "demand"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "excpitem"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "homebanking"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "mcw"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "mcwinteractive"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "stateless"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "subroutine"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "symconnect"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "validation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "windows"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "windowsprint"
+        }
+      ]
+    },
+    "type_expression": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "primitive_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "array_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "const_type"
+        }
+      ]
+    },
+    "primitive_type": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "character_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "date_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "float_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "money_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "rate_type"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sized_character_type"
+        }
+      ]
+    },
+    "character_type": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "character",
+        "flags": "i"
+      }
+    },
+    "date_type": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "date",
+        "flags": "i"
+      }
+    },
+    "float_type": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "float",
+        "flags": "i"
+      }
+    },
+    "money_type": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "money",
+        "flags": "i"
+      }
+    },
+    "number_type": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "number",
+        "flags": "i"
+      }
+    },
+    "rate_type": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "rate",
+        "flags": "i"
+      }
+    },
+    "sized_character_type": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "character_type"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "array_type": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "primitive_type"
+        },
+        {
+          "type": "PATTERN",
+          "value": "array",
+          "flags": "i"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "number"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "number"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ","
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "number"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "const_type": {
+      "type": "SYMBOL",
+      "name": "_literal"
+    },
+    "character": {
+      "type": "PATTERN",
+      "value": "\"[^\"]*\""
+    },
+    "date": {
+      "type": "PATTERN",
+      "value": "'[\\d-]+\\/[\\d-]+\\/[\\d-]+'"
+    },
+    "float": {
+      "type": "PATTERN",
+      "value": "[+-]?\\d+\\.\\d+([eE][+-]?[\\d]+)?"
+    },
+    "money": {
+      "type": "PATTERN",
+      "value": "[$][\\d,]+(\\.\\d+)?"
+    },
+    "rate": {
+      "type": "PATTERN",
+      "value": "[\\d]+\\.?[\\d]+%"
+    },
+    "number": {
+      "type": "PREC",
+      "value": 0,
+      "content": {
+        "type": "PATTERN",
+        "value": "[+-]?\\d+"
+      }
+    },
+    "_literal": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "character"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "date"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "float"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "money"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "rate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "target_clause": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "mode_keyword"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "target"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "record_name"
+        }
+      ]
+    },
+    "define_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "define"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "variable_declaration"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "include_statement"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "setup_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "setup"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "statement"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "select_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "select"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "every"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "all"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "none"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "boolean_expression"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "sort_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "sort"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "-"
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "field_access"
+                  },
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "subtotal"
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "if_statement"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "letter_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "letter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "title_statement"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "statement"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "print_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "print"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "title_statement"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "reportcategory"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "print_datafile"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "print_labels"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "statement"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "print_datafile": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "datafile"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "ascii"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "ebcdic"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "recordsize"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "blocksize"
+        }
+      ]
+    },
+    "print_labels": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "labels"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "across"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "width"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "formlength"
+        }
+      ]
+    },
+    "procedure_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "procedure"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "statement"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "variable_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "type_expression"
+        }
+      ]
+    },
+    "statement": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "assignment_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "if_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "for_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "while_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "do_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "headers_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "trailers_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "fmperform_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tranperform_block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "call_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "include_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "nonansistandard"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "terminate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "pullcreditreport"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bell"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "blink"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bright"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dim"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "stopblink"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "enterdelimiter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogclose"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogdisplay"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogendgroupbox"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogendgrouping"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogintrotext"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialognewcolumn"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptcomboend"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogpromptlistend"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogstartgrouping"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "dialogtextlistend"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "winmessagesend"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "winmodetext"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "winmodewindows"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "divprojectcalc"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "htmlviewdisplay"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "htmlviewopen"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "loanprojectcalc"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "print_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "col_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "printcontrol_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "header"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "newline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "newpage"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "suppress"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "suppressnewline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "overdrawavailablecalc"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "overdrawavailableinit"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "liveinstcheck"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "prevsystemdate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sysactualdate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sysactualtime"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sysclientnumber"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sysconsolenum"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "syshostname"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sysmemomode"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "syssymdirectory"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "systemdate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sysusernumber"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "syswindowslevel"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "function_call"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_builtin_statements"
+        }
+      ]
+    },
+    "assignment_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "call_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "call"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        }
+      ]
+    },
+    "include_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "include"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "character"
+        }
+      ]
+    },
+    "do_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "do"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "statement"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "headers_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "headers"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "trailers_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "trailers"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "for_block": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "for_record"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "for_each"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "for_each_with"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "for_with"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "for_"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "statement"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "until_statement"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "for_record": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "for"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "record"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "for_each": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "for"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "each"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "record_name"
+        }
+      ]
+    },
+    "for_each_with": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "for"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "each"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "record_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "with"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "boolean_expression"
+        }
+      ]
+    },
+    "for_with": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "for"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "record_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "with"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "with_field"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "expression"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "uniquekey"
+            }
+          ]
+        }
+      ]
+    },
+    "for_": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "for"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "to"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "by"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "expression"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "until_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "until"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "boolean_expression"
+        }
+      ]
+    },
+    "with_field": {
+      "type": "PATTERN",
+      "value": "[a-z]*( [a-z]*)?",
+      "flags": "i"
+    },
+    "while_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "while"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "boolean_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "statement"
+        }
+      ]
+    },
+    "fmperform_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "fmperform"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "change"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "create"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "revise"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "delete"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "targetfile"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "record"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "loc"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "slid"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "expression"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "afterlast"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "beforefirst"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "subrecord"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "loc"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "slid"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "expression"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "afterlast"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "beforefirst"
+                    }
+                  ]
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SEQ",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "bottomrecord"
+                        },
+                        {
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "expression"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ","
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ","
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "do"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "fmperform_statement"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "fmperform_statement": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "set"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "field_name"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "to"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "setwarning"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "expression"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "clearwarning"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "expression"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "insert"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "into"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "queue"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "remove"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "from"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "queue"
+            }
+          ]
+        }
+      ]
+    },
+    "tranperform_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "tranperform"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "trancode"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "number"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "do"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "tranperform_statement"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "end"
+        }
+      ]
+    },
+    "trancode": {
+      "type": "PATTERN",
+      "value": "[a-z]{1,2}",
+      "flags": "i"
+    },
+    "tranperform_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "set"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "field_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "to"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "if_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "if"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "boolean_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "then"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "statement"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "else_statement"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "else_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "else"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "statement"
+        }
+      ]
+    },
+    "print_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "print"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "printcontrol_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "printcontrol"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "col_statement": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "col"
+          },
+          {
+            "type": "STRING",
+            "value": "="
+          },
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "left"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "right"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "wrap"
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "expression"
+          }
+        ]
+      }
+    },
+    "expression": {
+      "type": "SYMBOL",
+      "name": "_additive_expression"
+    },
+    "_additive_expression": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "addition_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "subtraction_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_multiplicative_expression"
+        }
+      ]
+    },
+    "addition_expression": {
+      "type": "PREC_LEFT",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_additive_expression"
+          },
+          {
+            "type": "STRING",
+            "value": "+"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_multiplicative_expression"
+          }
+        ]
+      }
+    },
+    "subtraction_expression": {
+      "type": "PREC_LEFT",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_additive_expression"
+          },
+          {
+            "type": "STRING",
+            "value": "-"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_multiplicative_expression"
+          }
+        ]
+      }
+    },
+    "_multiplicative_expression": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "multiplication_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "division_expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_primary_expression"
+        }
+      ]
+    },
+    "multiplication_expression": {
+      "type": "PREC_LEFT",
+      "value": 2,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_multiplicative_expression"
+          },
+          {
+            "type": "STRING",
+            "value": "*"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_primary_expression"
+          }
+        ]
+      }
+    },
+    "division_expression": {
+      "type": "PREC_LEFT",
+      "value": 2,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_multiplicative_expression"
+          },
+          {
+            "type": "STRING",
+            "value": "/"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_primary_expression"
+          }
+        ]
+      }
+    },
+    "_primary_expression": {
+      "type": "PREC",
+      "value": 2,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_literal"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "identifier"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "function_call"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "field_access"
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "("
+              },
+              {
+                "type": "SYMBOL",
+                "name": "expression"
+              },
+              {
+                "type": "STRING",
+                "value": ")"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "field_access": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "record_name"
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "field_name"
+        }
+      ]
+    },
+    "field_ident": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "[a-z_][a-z0-9_]*",
+        "flags": "i"
+      }
+    },
+    "subfield_access": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "SYMBOL",
+              "name": "expression"
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    },
+    "field_name": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "field_ident"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "field_ident"
+            },
+            {
+              "type": "STRING",
+              "value": ":"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "subfield_access"
+            }
+          ]
+        }
+      ]
+    },
+    "boolean_expression": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "comparison"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "function_call"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "not"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "boolean_expression"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "any"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "record_name"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "with"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "boolean_expression"
+            }
+          ]
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 2,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "boolean_expression"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "and"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "boolean_expression"
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 1,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "boolean_expression"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "or"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "boolean_expression"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "SYMBOL",
+              "name": "boolean_expression"
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    },
+    "comparison": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "comparison_operator"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expression"
+        }
+      ]
+    },
+    "comparison_operator": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "STRING",
+          "value": "<>"
+        },
+        {
+          "type": "STRING",
+          "value": "<"
+        },
+        {
+          "type": "STRING",
+          "value": ">"
+        },
+        {
+          "type": "STRING",
+          "value": "<="
+        },
+        {
+          "type": "STRING",
+          "value": ">="
+        }
+      ]
+    },
+    "record_name": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "record"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "subrecord"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "bottomrecord"
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "record"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "subrecord"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "record"
+          }
+        ]
+      }
+    },
+    "array_access": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "expression"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ","
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "expression"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
+        }
+      ]
+    },
+    "_identifier": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "[@a-z_][a-z0-9_]*",
+        "flags": "i"
+      }
+    },
+    "identifier": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "array_access"
+        }
+      ]
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "comment_block"
+    }
+  ],
+  "conflicts": [
+    [
+      "identifier",
+      "array_access"
+    ],
+    [
+      "record",
+      "subrecord"
+    ],
+    [
+      "if_statement"
+    ]
+  ],
+  "precedences": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "comment_block"
+    }
+  ],
+  "inline": [],
+  "supertypes": [],
+  "reserved": {}
+}

@@ -1,0 +1,1113 @@
+====
+Simple target clause w/ comment
+====
+
+[Comment]
+target = share hold
+
+----
+
+(source_file
+  (comment_block)
+  (target_clause
+    (target)
+    (record_name
+      (record
+        (share))
+      (subrecord
+        (hold)))))
+
+====
+Case sensitivity test
+====
+
+TARGET = share
+
+----
+
+(source_file
+  (target_clause
+    (target)
+    (record_name
+      (record
+        (share)))))
+
+====
+Test define block
+====
+
+define
+	strVar = character
+	dateVar = date
+	floatVar = float
+	moneyVar = money
+	numVar = number
+	rateVar = rate
+	sizedStrVar = character(20)
+
+	strArr = character array(99)
+	dateArr = date array(99)
+	floatArr = float array(99)
+	moneyArr = money array(99)
+	numArr = number array(99)
+	rateArr = rate array(99)
+	sizedStrArr = character(20) array(99)
+
+	strConst = "str"
+	dateConst = '-/--/----'
+	floatConst = 1.2E2
+	moneyConst = $1.23
+	rateConst = 123.456%
+	numConst = 0
+end
+
+----
+
+(source_file
+  (define_block
+    (define)
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (primitive_type
+          (character_type))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (primitive_type
+          (date_type))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (primitive_type
+          (float_type))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (primitive_type
+          (money_type))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (primitive_type
+          (number_type))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (primitive_type
+          (rate_type))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (primitive_type
+          (sized_character_type
+            (character_type)
+            (number)))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (array_type
+          (primitive_type
+            (character_type))
+          (number))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (array_type
+          (primitive_type
+            (date_type))
+          (number))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (array_type
+          (primitive_type
+            (float_type))
+          (number))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (array_type
+          (primitive_type
+            (money_type))
+          (number))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (array_type
+          (primitive_type
+            (number_type))
+          (number))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (array_type
+          (primitive_type
+            (rate_type))
+          (number))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (array_type
+          (primitive_type
+            (sized_character_type
+              (character_type)
+              (number)))
+          (number))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (const_type
+          (character))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (const_type
+          (date))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (const_type
+          (float))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (const_type
+          (money))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (const_type
+          (rate))))
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (const_type
+          (number))))
+    (end)))
+
+====
+Complex select block
+====
+
+select
+  [complex boolean expression over atomic values. ]
+  (share hold:field [colon is the field accessor symbol] = stringVariable and
+  share hold:field2 = constant) or
+  (share hold:field = shortStringVar and share hold:field2 <> constant)
+end
+
+----
+
+(source_file
+  (select_block
+    (select)
+    (comment_block)
+    (boolean_expression
+      (boolean_expression
+        (boolean_expression
+          (boolean_expression
+            (comparison
+              (expression
+                (field_access
+                  (record_name
+                    (record
+                      (share))
+                    (subrecord
+                      (hold)))
+                  (field_name
+                    (field_ident))))
+              (comment_block)
+              (comparison_operator)
+              (expression
+                (identifier))))
+          (and)
+          (boolean_expression
+            (comparison
+              (expression
+                (field_access
+                  (record_name
+                    (record
+                      (share))
+                    (subrecord
+                      (hold)))
+                  (field_name
+                    (field_ident))))
+              (comparison_operator)
+              (expression
+                (identifier))))))
+      (or)
+      (boolean_expression
+        (boolean_expression
+          (boolean_expression
+            (comparison
+              (expression
+                (field_access
+                  (record_name
+                    (record
+                      (share))
+                    (subrecord
+                      (hold)))
+                  (field_name
+                    (field_ident))))
+              (comparison_operator)
+              (expression
+                (identifier))))
+          (and)
+          (boolean_expression
+            (comparison
+              (expression
+                (field_access
+                  (record_name
+                    (record
+                      (share))
+                    (subrecord
+                      (hold)))
+                  (field_name
+                    (field_ident))))
+              (comparison_operator)
+              (expression
+                (identifier)))))))
+    (end)))
+
+====
+Basic structure
+====
+[Comment]
+target = share hold
+
+define
+end
+
+setup
+end
+
+select
+	share:field = "string"
+end
+----
+
+(source_file
+  (comment_block)
+  (target_clause
+    (target)
+    (record_name
+      (record
+        (share))
+      (subrecord
+        (hold))))
+  (define_block
+    (define)
+    (end))
+  (setup_block
+    (setup)
+    (end))
+  (select_block
+    (select)
+    (boolean_expression
+      (comparison
+        (expression
+          (field_access
+            (record_name
+              (record
+                (share)))
+            (field_name
+              (field_ident))))
+        (comparison_operator)
+        (expression
+          (character))))
+    (end)))
+
+====
+If statement with do block
+====
+setup
+  if constant = 1 then
+  do
+    stringVariable = "someValue"
+  end
+end
+
+[ensures that a subsequent block will parse]
+select
+  share hold:field = stringVariable
+end
+---
+
+(source_file
+  (setup_block
+    (setup)
+    (statement
+      (if_statement
+        (if)
+        (boolean_expression
+          (comparison
+            (expression
+              (identifier))
+            (comparison_operator)
+            (expression
+              (number))))
+        (then)
+        (statement
+          (do_block
+            (do)
+            (statement
+              (assignment_statement
+                (identifier)
+                (expression
+                  (character))))
+            (end)))))
+    (end))
+  (comment_block)
+  (select_block
+    (select)
+    (boolean_expression
+      (comparison
+        (expression
+          (field_access
+            (record_name
+              (record
+                (share))
+              (subrecord
+                (hold)))
+            (field_name
+              (field_ident))))
+        (comparison_operator)
+        (expression
+          (identifier))))
+    (end)))
+
+====
+Common expressions
+====
+setup
+	variable = 1 + 2
+	variable = 1 - 2
+	variable = 1 * 2
+	variable = 1 / 2
+	variable = 1 + 2 + 3
+	variable = 1 + 2 * 3
+	variable = 1 * 2 + 3
+	variable = (1 + 2) * 3
+	variable = 1 * -1
+end
+----
+
+(source_file
+  (setup_block
+    (setup)
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (addition_expression
+            (number)
+            (number)))))
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (subtraction_expression
+            (number)
+            (number)))))
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (multiplication_expression
+            (number)
+            (number)))))
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (division_expression
+            (number)
+            (number)))))
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (addition_expression
+            (addition_expression
+              (number)
+              (number))
+            (number)))))
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (addition_expression
+            (number)
+            (multiplication_expression
+              (number)
+              (number))))))
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (addition_expression
+            (multiplication_expression
+              (number)
+              (number))
+            (number)))))
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (multiplication_expression
+            (expression
+              (addition_expression
+                (number)
+                (number)))
+            (number)))))
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (multiplication_expression
+            (number)
+            (number)))))
+    (end)))
+
+====
+For block testing
+====
+setup
+	for i = 1 to 99
+	do
+		print i newline
+	end
+
+	for account accountNumber
+	do
+		print account:number newline
+	end
+
+	for each share with share:type = 0
+	do
+		print share:id newline
+	end
+
+	for each share
+	do
+		suppressnewline
+	end
+end
+----
+
+(source_file
+  (setup_block
+    (setup)
+    (statement
+      (for_block
+        (for_
+          (for)
+          (identifier)
+          (expression
+            (number))
+          (to)
+          (expression
+            (number)))
+        (statement
+          (do_block
+            (do)
+            (statement
+              (print_statement
+                (print)
+                (expression
+                  (identifier))))
+            (statement
+              (newline))
+            (end)))))
+    (statement
+      (for_block
+        (for_record
+          (for)
+          (record
+            (account))
+          (expression
+            (identifier)))
+        (statement
+          (do_block
+            (do)
+            (statement
+              (print_statement
+                (print)
+                (expression
+                  (field_access
+                    (record_name
+                      (record
+                        (account)))
+                    (field_name
+                      (field_ident))))))
+            (statement
+              (newline))
+            (end)))))
+    (statement
+      (for_block
+        (for_each_with
+          (for)
+          (each)
+          (record_name
+            (record
+              (share)))
+          (with)
+          (boolean_expression
+            (comparison
+              (expression
+                (field_access
+                  (record_name
+                    (record
+                      (share)))
+                  (field_name
+                    (field_ident))))
+              (comparison_operator)
+              (expression
+                (number)))))
+        (statement
+          (do_block
+            (do)
+            (statement
+              (print_statement
+                (print)
+                (expression
+                  (field_access
+                    (record_name
+                      (record
+                        (share)))
+                    (field_name
+                      (field_ident))))))
+            (statement
+              (newline))
+            (end)))))
+    (statement
+      (for_block
+        (for_each
+          (for)
+          (each)
+          (record_name
+            (record
+              (share))))
+        (statement
+          (do_block
+            (do)
+            (statement
+              (suppressnewline))
+            (end)))))
+    (end)))
+
+====
+Variable identifier keyword conflicts
+====
+define
+	variableNumber = number
+end
+
+setup
+	if variableNumber = 1 then
+		print "Okay"
+end
+----
+
+(source_file
+  (define_block
+    (define)
+    (variable_declaration
+      (identifier)
+      (type_expression
+        (primitive_type
+          (number_type))))
+    (end))
+  (setup_block
+    (setup)
+    (statement
+      (if_statement
+        (if)
+        (boolean_expression
+          (comparison
+            (expression
+              (identifier))
+            (comparison_operator)
+            (expression
+              (number))))
+        (then)
+        (statement
+          (print_statement
+            (print)
+            (expression
+              (character))))))
+    (end)))
+
+====
+Function call
+====
+setup
+	[single arg]
+	chrValue(variableCharacter)
+	fileread(filenumber, readlength, variableOutputCharacter, variableErrorCharacter)
+end
+----
+
+(source_file
+  (setup_block
+    (setup)
+    (comment_block)
+    (statement
+      (function_call
+        (function_name
+          (chrvalue))
+        (expression
+          (identifier))))
+    (statement
+      (function_call
+        (function_name
+          (fileread))
+        (expression
+          (identifier))
+        (expression
+          (identifier))
+        (expression
+          (identifier))
+        (expression
+          (identifier))))
+    (end)))
+
+====
+Functions vs arrays
+====
+procedure test
+	[Array access]
+	emptyCharVariable(1) = ""
+	[Function call]
+	fileread(filenumber, readlength, variableOutputCharacter, variableErrorCharacter)
+end
+----
+
+(source_file
+  (procedure_block
+    (procedure)
+    (identifier)
+    (comment_block)
+    (statement
+      (assignment_statement
+        (identifier
+          (array_access
+            (expression
+              (number))))
+        (expression
+          (character))))
+    (comment_block)
+    (statement
+      (function_call
+        (function_name
+          (fileread))
+        (expression
+          (identifier))
+        (expression
+          (identifier))
+        (expression
+          (identifier))
+        (expression
+          (identifier))))
+    (end)))
+
+====
+Comments
+====
+[a [b]]
+[a [b] c]
+[
+ a
+ b
+]
+[
+ a
+ [b]
+ c
+]
+----
+
+(source_file
+  (comment_block)
+  (comment_block)
+  (comment_block)
+  (comment_block))
+
+====
+For each comment error
+====
+setup
+	for each share [a]
+	do
+		suppressnewline [any statement can go here]
+	end
+end
+----
+
+(source_file
+  (setup_block
+    (setup)
+    (statement
+      (for_block
+        (for_each
+          (for)
+          (each)
+          (record_name
+            (record
+              (share))))
+        (comment_block)
+        (statement
+          (do_block
+            (do)
+            (statement
+              (suppressnewline))
+            (comment_block)
+            (end)))))
+    (end)))
+
+====
+Subfield access
+====
+setup
+	var = share:warningcode:1
+	for i = 1 to 20
+	do
+		print share:warningcode:(i)
+	end
+end
+----
+
+(source_file
+  (setup_block
+    (setup)
+    (statement
+      (assignment_statement
+        (identifier)
+        (expression
+          (field_access
+            (record_name
+              (record
+                (share)))
+            (field_name
+              (field_ident)
+              (subfield_access
+                (number)))))))
+    (statement
+      (for_block
+        (for_
+          (for)
+          (identifier)
+          (expression
+            (number))
+          (to)
+          (expression
+            (number)))
+        (statement
+          (do_block
+            (do)
+            (statement
+              (print_statement
+                (print)
+                (expression
+                  (field_access
+                    (record_name
+                      (record
+                        (share)))
+                    (field_name
+                      (field_ident)
+                      (subfield_access
+                        (expression
+                          (identifier))))))))
+            (end)))))
+    (end)))
+
+====
+Not boolean
+====
+print title = "test"
+	for each share with (not(share:type=7))
+	do
+		suppressnewline
+	end
+end
+----
+
+(source_file
+  (print_block
+    (print)
+    (title_statement
+      (title)
+      (expression
+        (character)))
+    (statement
+      (for_block
+        (for_each_with
+          (for)
+          (each)
+          (record_name
+            (record
+              (share)))
+          (with)
+          (boolean_expression
+            (boolean_expression
+              (not)
+              (boolean_expression
+                (boolean_expression
+                  (comparison
+                    (expression
+                      (field_access
+                        (record_name
+                          (record
+                            (share)))
+                        (field_name
+                          (field_ident))))
+                    (comparison_operator)
+                    (expression
+                      (number))))))))
+        (statement
+          (do_block
+            (do)
+            (statement
+              (suppressnewline))
+            (end)))))
+    (end)))
+
+====
+Print title block
+====
+print title = "a"
+	newline
+end
+----
+
+(source_file
+  (print_block
+    (print)
+    (title_statement
+      (title)
+      (expression
+        (character)))
+    (statement
+      (newline))
+    (end)))
+
+====
+FMPerform block - record locator is array variable
+====
+print title = "a"
+	fmperform revise card loc CardLoc(arrInd) (0, 0, fmerror)
+	do
+		set type to systemdate
+	end
+end
+----
+
+(source_file
+  (print_block
+    (print)
+    (title_statement
+      (title)
+      (expression
+        (character)))
+    (statement
+      (fmperform_block
+        (fmperform)
+        (revise)
+        (record
+          (card))
+        (loc)
+        (expression
+          (identifier
+            (array_access
+              (expression
+                (identifier)))))
+        (expression
+          (number))
+        (expression
+          (number))
+        (identifier)
+        (do)
+        (fmperform_statement
+          (set)
+          (field_name
+            (field_ident))
+          (to)
+          (expression
+            (identifier)))
+        (end)))
+    (end)))
+
+====
+FMPerform block - record locator number identifier looks like function call
+====
+print title = "a"
+	fmperform revise card loc CardLoc (0, 0, fmerror)
+	do
+		set type to systemdate
+	end
+end
+----
+
+(source_file
+  (print_block
+    (print)
+    (title_statement
+      (title)
+      (expression
+        (character)))
+    (statement
+      (fmperform_block
+        (fmperform)
+        (revise)
+        (record
+          (card))
+        (loc)
+        (expression
+          (identifier))
+        (expression
+          (number))
+        (expression
+          (number))
+        (identifier)
+        (do)
+        (fmperform_statement
+          (set)
+          (field_name
+            (field_ident))
+          (to)
+          (expression
+            (identifier)))
+        (end)))
+    (end)))
+
+====
+For account direct
+====
+print title = "a"
+	for account account:number
+	do
+		newline
+	end
+end
+----
+
+(source_file
+  (print_block
+    (print)
+    (title_statement
+      (title)
+      (expression
+        (character)))
+    (statement
+      (for_block
+        (for_record
+          (for)
+          (record
+            (account))
+          (expression
+            (field_access
+              (record_name
+                (record
+                  (account)))
+              (field_name
+                (field_ident)))))
+        (statement
+          (do_block
+            (do)
+            (statement
+              (newline))
+            (end)))))
+    (end)))
+
+====
+Tranperform block
+====
+print title = "a"
+	tranperform d (1, seq1, seq2, checkAcct, checkNum, err)
+	do
+		set amount to moneyVar
+	end
+end
+----
+
+(source_file
+  (print_block
+    (print)
+    (title_statement
+      (title)
+      (expression
+        (character)))
+    (statement
+      (tranperform_block
+        (tranperform)
+        (trancode)
+        (number)
+        (identifier)
+        (identifier)
+        (identifier)
+        (identifier)
+        (identifier)
+        (do)
+        (tranperform_statement
+          (set)
+          (field_name
+            (field_ident))
+          (to)
+          (expression
+            (identifier)))
+        (end)))
+    (end)))
+
+====
+If function
+====
+setup
+	if yesnoprompt("a") then
+		newline
+end
+----
+
+(source_file
+  (setup_block
+    (setup)
+    (statement
+      (if_statement
+        (if)
+        (boolean_expression
+          (function_call
+            (function_name
+              (yesnoprompt))
+            (expression
+              (character))))
+        (then)
+        (statement
+          (newline))))
+    (end)))
+
+====
+Record_name = Record_field
+====
+print title = "a"
+	print comment:comment
+end
+----
+
+(source_file
+  (print_block
+    (print)
+    (title_statement
+      (title)
+      (expression
+        (character)))
+    (statement
+      (print_statement
+        (print)
+        (expression
+          (field_access
+            (record_name
+              (record
+                (comment)))
+            (field_name
+              (field_ident))))))
+    (end)))
