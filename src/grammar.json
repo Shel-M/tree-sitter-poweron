@@ -1136,6 +1136,11 @@
       "value": "year",
       "flags": "i"
     },
+    "dialogintrotext": {
+      "type": "PATTERN",
+      "value": "dialogintrotext",
+      "flags": "i"
+    },
     "dialogpromptchar": {
       "type": "PATTERN",
       "value": "dialogpromptchar",
@@ -1984,11 +1989,6 @@
       "value": "dialogendgrouping",
       "flags": "i"
     },
-    "dialogintrotext": {
-      "type": "PATTERN",
-      "value": "dialogintrotext",
-      "flags": "i"
-    },
     "dialognewcolumn": {
       "type": "PATTERN",
       "value": "dialognewcolumn",
@@ -2647,6 +2647,19 @@
         {
           "type": "SYMBOL",
           "name": "year"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_function_args"
+        }
+      ]
+    },
+    "dialogintrotext_function": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogintrotext"
         },
         {
           "type": "SYMBOL",
@@ -4601,6 +4614,10 @@
           {
             "type": "SYMBOL",
             "name": "year"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "dialogintrotext"
           },
           {
             "type": "SYMBOL",

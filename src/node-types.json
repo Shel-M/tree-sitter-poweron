@@ -1071,6 +1071,10 @@
           "named": true
         },
         {
+          "type": "dialogintrotext",
+          "named": true
+        },
+        {
           "type": "dialogpromptchar",
           "named": true
         },

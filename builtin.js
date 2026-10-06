@@ -94,6 +94,7 @@ export const datetime = {
 
 export const demand_ui = {
   functions: {
+    dialogintrotext: $ => /dialogintrotext/i,
     dialogpromptchar: $ => /dialogpromptchar/i,
     dialogpromptcode: $ => /dialogpromptcode/i,
     dialogpromptcombooption: $ => /dialogpromptcombooption/i,
@@ -139,7 +140,6 @@ export const demand_ui = {
     dialogdisplay: $ => /dialogdisplay/i,
     dialogendgroupbox: $ => /dialogendgroupbox/i,
     dialogendgrouping: $ => /dialogendgrouping/i,
-    dialogintrotext: $ => /dialogintrotext/i,
     dialognewcolumn: $ => /dialognewcolumn/i,
     dialogpromptcomboend: $ => /dialogpromptcomboend/i,
     dialogpromptlistend: $ => /dialogpromptlistend/i,
