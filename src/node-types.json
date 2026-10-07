@@ -1799,6 +1799,21 @@
     }
   },
   {
+    "type": "modes",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "mode_keyword",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "money_conv",
     "named": true,
     "fields": {}
@@ -2574,6 +2589,10 @@
           "named": true
         },
         {
+          "type": "modes",
+          "named": true
+        },
+        {
           "type": "print_block",
           "named": true
         },
@@ -3195,10 +3214,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "mode_keyword",
-          "named": true
-        },
         {
           "type": "record_name",
           "named": true

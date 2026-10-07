@@ -99,6 +99,7 @@ export default grammar({
 
   rules: {
     source_file: $ => repeat(choice(
+      $.modes,
       $.target_clause,
       $.define_block,
       $.setup_block,
@@ -128,6 +129,7 @@ export default grammar({
     )),
 
     /// Keyword groupings
+    modes: $ => prec.right(repeat1($.mode_keyword)),
     mode_keyword: $ => choice(
       $.accountchange,
       $.acs,
@@ -207,7 +209,6 @@ export default grammar({
     /// Divisions
 
     target_clause: $ => seq(
-      repeat($.mode_keyword),
       $.target,
       '=',
       $.record_name,

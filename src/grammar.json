@@ -9,6 +9,10 @@
         "members": [
           {
             "type": "SYMBOL",
+            "name": "modes"
+          },
+          {
+            "type": "SYMBOL",
             "name": "target_clause"
           },
           {
@@ -5186,6 +5190,17 @@
         ]
       }
     },
+    "modes": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "REPEAT1",
+        "content": {
+          "type": "SYMBOL",
+          "name": "mode_keyword"
+        }
+      }
+    },
     "mode_keyword": {
       "type": "CHOICE",
       "members": [
@@ -5518,13 +5533,6 @@
     "target_clause": {
       "type": "SEQ",
       "members": [
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "mode_keyword"
-          }
-        },
         {
           "type": "SYMBOL",
           "name": "target"
